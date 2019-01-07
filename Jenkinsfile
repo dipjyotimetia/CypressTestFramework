@@ -12,11 +12,6 @@ pipeline {
                 bat 'npm run build'
             }
         }
-        stage('Unit Tests') {
-            steps {
-                bat 'npm run test'
-            }
-        }
         stage('e2e Tests') {
             steps {
                 bat 'npm run cypress:ci'
