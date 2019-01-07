@@ -38,4 +38,5 @@ pipeline {
         always {
             junit 'results/cypress-report.xml'
         }
+    }
 }
