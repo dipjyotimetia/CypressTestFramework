@@ -1,9 +1,5 @@
 pipeline {
     agent any
-  
-    environment {
-        CHROME_BIN = '/bin/google-chrome'
-    }
 
     stages {
         stage('Dependencies') {
