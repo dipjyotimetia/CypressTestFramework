@@ -38,4 +38,9 @@ pipeline {
         always {
             junit 'results/cypress-report.xml'
         }
+<<<<<<< HEAD:Jenkinsfile
 }
+=======
+    }
+}
+>>>>>>> update:jenkinsfile
