@@ -26,7 +26,7 @@ jobs:
             - ~/.cache
       - run:
           name: Running E2E tests with JUnit reporter
-          command: npm run test-junit
+          command: npm run test:ci
       - store_test_results:
           path: junit-results
       - run:
