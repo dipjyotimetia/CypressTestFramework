@@ -2,16 +2,8 @@
 
 describe('Testing the hero list page', function () {
 
-    it('should contain the word heroes', function () {
-        cy.visit('http://automationpractice.com/index.php');
-        cy.get('.login').click();
-        cy.screenshot();
-    });
-
-    it('', () => {
-        cy.visit('http://automationpractice.com/index.php')
-            .get('.login')
-            .click()
+    it('Beteasy', () => {
+        cy.visit('https://beteasy.com.au/')
             .screenshot();
     });
 
