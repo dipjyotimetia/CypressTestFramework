@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 const filterShowOnlyElement = '.show-only';
 const searchResultHolderElement = '.search-results';
 const searchResultsElement = '.project-card';

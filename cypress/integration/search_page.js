@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 import { navHeader } from '../support/pageObjects/nav_header';
 import { searchPage } from '../support/pageObjects/search_page';
 import { searchArea } from '../support/pageObjects/search_area';

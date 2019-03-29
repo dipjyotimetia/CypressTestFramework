@@ -12,7 +12,7 @@
     "ng": "ng",
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --headed",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
     "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
   },
@@ -22,12 +22,12 @@
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "cypress": "^3.1.5",
-    "eslint-plugin-cypress": "^2.2.0",
-    "jasmine-core": "~2.99.1",
+    "cypress": "^3.2.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "lodash": "^4.16.2",
-    "start-server-and-test": "^1.7.11"
+    "lodash": "^4.17.11",
+    "start-server-and-test": "^1.7.12"
   },
   "repository": {}
 }
