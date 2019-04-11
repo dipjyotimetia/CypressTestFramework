@@ -1,41 +1,22 @@
 
-# FROM cypress/browsers:chrome69
-# RUN npm i cypress
-# RUN $(npm bin)/cypress run --browser chrome
-FROM cypress/base:10
+FROM cypress/base:11.13.0
+WORKDIR /app
 
-USER root
+# dependencies will be installed only if the package files change
+COPY package.json .
+COPY package-lock.json .
 
-RUN node --version
-RUN echo "force new chrome here"
+# by setting CI environment variable we switch the Cypress install messages
+# to small "started / finished" and avoid 1000s of lines of progress messages
+# https://github.com/cypress-io/cypress/issues/1243
+ENV CI=1
+RUN npm ci
+# verify that Cypress has been installed correctly.
+# running this command separately from "cypress run" will also cache its result
+# to avoid verifying again when running the tests
+RUN npx cypress verify
 
-# install Chromebrowser
-RUN \
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
-    apt-get update && \
-    apt-get install -y dbus-x11 google-chrome-stable && \
-    rm -rf /var/lib/apt/lists/*
+COPY cypress cypress
+COPY cypress.json .
 
-# "fake" dbus address to prevent errors
-# https://github.com/SeleniumHQ/docker-selenium/issues/87
-ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
-
-# Add zip utility - it comes in very handy
-RUN apt-get update && apt-get install -y zip
-
-# versions of local tools
-RUN node -v
-RUN npm -v
-RUN yarn -v
-RUN google-chrome --version
-RUN zip --version
-RUN git --version
-
-# a few environment variables to make NPM installs easier
-# good colors for most applications
-ENV TERM xterm
-# avoid million NPM install messages
-ENV npm_config_loglevel warn
-# allow installing when the main user is root
-ENV npm_config_unsafe_perm true
+RUN npx cypress run
