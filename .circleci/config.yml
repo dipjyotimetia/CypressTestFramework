@@ -1,40 +1,31 @@
 
 version: 2
-
 jobs:
-  build:
+  test:
     docker:
-      # the Docker image with Cypress dependencies
-      - image: cypress/base:8
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
-    parallelism: 1
+      - image: cypress/base:11.13.0
     steps:
       - checkout
+      # restore folders with npm dependencies and Cypress binary
       - restore_cache:
           keys:
-            - v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - v2-deps-{{ .Branch }}-
-            - v2-deps-
-      - run: npm ci
+            - cache-{{ checksum "package.json" }}
+      # install npm dependencies and Cypress binary
+      # if they were cached, this step is super quick
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run: npm run cy:verify
+      # save npm dependencies and Cypress binary for future runs
       - save_cache:
-          key: v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: cache-{{ checksum "package.json" }}
           paths:
             - ~/.npm
             - ~/.cache
-      - run:
-          name: Running E2E tests with JUnit reporter
-          command: npm run cy:run
-      - store_test_results:
-          path: junit-results
-    #   - run:
-    #       name: Running E2E tests with multiple reporters
-    #       command: npm run test-multiple
-    #   - store_test_results:
-    #       path: multiple-results
-      - store_artifacts:
-          path: cypress/videos
-      - store_artifacts:
-          path: cypress/screenshots
+      - run: npx cypress run
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
