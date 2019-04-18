@@ -1,32 +1,31 @@
 pipeline {
-    agent any
+  agent {
+    docker {
+      image 'cypress/base:11.13.0'
+    }
+  }
 
-    stages {
-        stage('Dependencies') {
-            steps {
-                bat 'npm i'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building....'
-            }
-        }
-        stage('e2e Tests') {
-            steps {
-                bat 'npm run cy:run'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+  stages {
+    
+    stage('build') {
+      steps {
+        echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        sh 'npm ci'
+        sh 'npx cypress verify'
+      }
     }
-    post {
-        always {
-            junit 'results/cypress-report.xml'
+
+    stage('test') {
+        steps {
+            echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            sh 'npx cypress run'
         }
+        }
+  }
+
+  post {
+    always {
+        junit 'results/cypress-report.xml'
     }
+ }
 }
-
