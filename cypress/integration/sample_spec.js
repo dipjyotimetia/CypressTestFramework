@@ -4,7 +4,11 @@ describe('Testing the hero list page', function () {
 
     it('Beteasy', () => {
         cy.visit('https://beteasy.com.au/')
-            .screenshot();
+            .screenshot()
+            .type('','')
+            .wait(1000)
+            .writeFile('')
+            .trigger('mouseover')
     });
 
     // Cypress.Commands.add("state", (...states) => {
