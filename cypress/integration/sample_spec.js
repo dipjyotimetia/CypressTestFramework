@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Testing the hero list page', function () {
+describe.skip('Testing the hero list page', function () {
 
     it('Beteasy', () => {
         cy.visit('https://beteasy.com.au/')

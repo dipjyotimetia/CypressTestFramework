@@ -1,4 +1,4 @@
-describe('Kitchen Sink', function () {
+describe.skip('Kitchen Sink', function () {
     it('.should() - assert that <title> is correct', function () {
         // https://on.cypress.io/visit
         cy.visit('https://example.cypress.io')
