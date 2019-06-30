@@ -21,8 +21,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "cypress": "^3.3.1",
+    "concurrently": "^4.1.1",
+    "cypress": "^3.3.2",
     "eslint-plugin-cypress": "^2.2.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
