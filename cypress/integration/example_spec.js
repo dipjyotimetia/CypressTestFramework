@@ -717,21 +717,21 @@ describe('Kitchen Sink', function () {
             })
         })
 
-        // it('cy.exec() - execute a system command', function () {
-        //     // cy.exec allows you to execute a system command.
-        //     // so you can take actions necessary for your test,
-        //     // but outside the scope of Cypress.
+        it('cy.exec() - execute a system command', function () {
+            // cy.exec allows you to execute a system command.
+            // so you can take actions necessary for your test,
+            // but outside the scope of Cypress.
 
-        //     // https://on.cypress.io/exec
-        //     cy.exec('echo Jane Lane')
-        //         .its('stdout').should('contain', 'Jane Lane')
+            // https://on.cypress.io/exec
+            cy.exec('echo Jane Lane')
+                .its('stdout').should('contain', 'Jane Lane')
 
-        //     cy.exec('cat cypress.json')
-        //         .its('stderr').should('be.empty')
+            cy.exec('cat cypress.json')
+                .its('stderr').should('be.empty')
 
-        //     cy.exec('pwd')
-        //         .its('code').should('eq', 0)
-        // })
+            cy.exec('pwd')
+                .its('code').should('eq', 0)
+        })
 
         it('cy.focused() - get the DOM element that has focus', function () {
             // https://on.cypress.io/focused
@@ -1462,4 +1462,4 @@ describe('Kitchen Sink', function () {
     //         })
     //     })
     // })
-})
+// })
