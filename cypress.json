@@ -6,5 +6,6 @@
     "mochaFile": "results/cypress-report.xml",
     "toConsole": true
   },
+  "theme":"dark",
   "projectId": "vfepbj"
 }

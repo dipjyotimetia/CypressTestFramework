@@ -12,7 +12,7 @@
     "ng": "ng",
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
-    "cy:run": "cypress run --headed integration/registration_spec.js",
+    "cy:run": "cypress run --headed integration/example_spec.js",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
     "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
   },
@@ -23,6 +23,9 @@
   "devDependencies": {
     "concurrently": "^4.1.2",
     "cypress": "^3.4.1",
+    "cypress-dark": "^1.7.14",
+    "cypress-file-upload": "^3.3.3",
+    "cypress-xpath": "^1.4.0",
     "eslint-plugin-cypress": "^2.6.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
