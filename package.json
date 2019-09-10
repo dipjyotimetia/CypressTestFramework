@@ -1,36 +1,43 @@
 {
   "name": "cypress_test_framework",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Example project cypress test",
+  "description": "Cypress test Framework",
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "start": "ng serve",
-    "test": "ng test",
-    "build": "ng build --prod",
-    "e2e": "ng e2e",
-    "ng": "ng",
+    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json",
+    "generate-report": "marge mochareports/*.json -f report -o mochareports",
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
     "cy:run": "cypress run --headed integration/example_spec.js",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
     "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "cypress",
+    "test"
+  ],
+  "author": "Dipjyoti Metia",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^3.4.1",
+    "lodash": "^4.17.15"
+  },
   "devDependencies": {
     "concurrently": "^4.1.2",
-    "cypress": "^3.4.1",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^3.3.3",
     "cypress-xpath": "^1.4.0",
     "eslint-plugin-cypress": "^2.6.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "lodash": "^4.17.15",
-    "start-server-and-test": "^1.10.0"
+    "start-server-and-test": "^1.10.0",
+    "mocha": "6.2.0",
+    "cypress-multi-reporters": "1.2.1",
+    "mochawesome": "4.1.0",
+    "mochawesome-merge": "2.0.1",
+    "mochawesome-report-generator": "4.0.1"
   },
   "repository": {}
 }

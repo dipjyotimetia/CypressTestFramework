@@ -1,10 +1,9 @@
 {
   "chromeWebSecurity": false,
   "screenshotsFolder": "cypress/screenshots",
-  "reporter": "junit",
+  "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-    "mochaFile": "results/cypress-report.xml",
-    "toConsole": true
+    "configFile":"reporterOptions.json"
   },
   "theme":"dark",
   "projectId": "vfepbj"

@@ -4,3 +4,5 @@
 /node_modules
 /cypress/screenshots/**
 /cypress/videos/**
+/mochareports
+/cypress/reports
