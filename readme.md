@@ -1,4 +1,4 @@
-[![GithubActions](https://github.com/dipjyotimetia/CypressTest/workflows/nodejs/badge.svg)](https://github.com/dipjyotimetia/CypressTest/actions)
+[![Build Status](https://github.com/dipjyotimetia/CypressTest/workflows/CypressCI/badge.svg)](https://github.com/dipjyotimetia/CypressTest/actions)
 
 <!-- https://hackernoon.com/cypress-io-docker-the-ultimate-e2e-stack-a20ee25654b1 -->
 
