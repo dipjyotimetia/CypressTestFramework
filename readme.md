@@ -1,5 +1,7 @@
 [![Build Status](https://github.com/dipjyotimetia/CypressTest/workflows/nodejs/badge.svg)](https://github.com/dipjyotimetia/CypressTest/actions)
 
+[![Build Status](https://github.com/CultureHQ/components/workflows/Push/badge.svg)](https://github.com/CultureHQ/components/actions)
+
 https://hackernoon.com/cypress-io-docker-the-ultimate-e2e-stack-a20ee25654b1
 
 https://medium.freecodecamp.org/how-to-test-your-frontend-with-the-cypress-io-framework-f048070f4330
