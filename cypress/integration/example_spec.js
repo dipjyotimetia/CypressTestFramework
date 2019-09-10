@@ -717,21 +717,21 @@ describe('Kitchen Sink', function () {
             })
         })
 
-        it('cy.exec() - execute a system command', function () {
-            // cy.exec allows you to execute a system command.
-            // so you can take actions necessary for your test,
-            // but outside the scope of Cypress.
+        // it('cy.exec() - execute a system command', function () {
+        //     // cy.exec allows you to execute a system command.
+        //     // so you can take actions necessary for your test,
+        //     // but outside the scope of Cypress.
 
-            // https://on.cypress.io/exec
-            cy.exec('echo Jane Lane')
-                .its('stdout').should('contain', 'Jane Lane')
+        //     // https://on.cypress.io/exec
+        //     cy.exec('echo Jane Lane')
+        //         .its('stdout').should('contain', 'Jane Lane')
 
-            cy.exec('cat cypress.json')
-                .its('stderr').should('be.empty')
+        //     cy.exec('cat cypress.json')
+        //         .its('stderr').should('be.empty')
 
-            cy.exec('pwd')
-                .its('code').should('eq', 0)
-        })
+        //     cy.exec('pwd')
+        //         .its('code').should('eq', 0)
+        // })
 
         it('cy.focused() - get the DOM element that has focus', function () {
             // https://on.cypress.io/focused
@@ -972,53 +972,53 @@ describe('Kitchen Sink', function () {
         })
     })
 
-    context('Files', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/commands/files')
-        })
-        it('cy.fixture() - load a fixture', function () {
-            // Instead of writing a response inline you can
-            // connect a response with a fixture file
-            // located in fixtures folder.
+    // context('Files', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/commands/files')
+    //     })
+    //     it('cy.fixture() - load a fixture', function () {
+    //         // Instead of writing a response inline you can
+    //         // connect a response with a fixture file
+    //         // located in fixtures folder.
 
-            cy.server()
+    //         cy.server()
 
-            // https://on.cypress.io/fixture
-            cy.fixture('example.json').as('comment')
+    //         // https://on.cypress.io/fixture
+    //         cy.fixture('example.json').as('comment')
 
-            cy.route(/comments/, '@comment').as('getComment')
+    //         cy.route(/comments/, '@comment').as('getComment')
 
-            // we have code that gets a comment when
-            // the button is clicked in scripts.js
-            cy.get('.fixture-btn').click()
+    //         // we have code that gets a comment when
+    //         // the button is clicked in scripts.js
+    //         cy.get('.fixture-btn').click()
 
-            cy.wait('@getComment').its('responseBody')
-                .should('have.property', 'name')
-                .and('include', 'Using fixtures to represent data')
+    //         cy.wait('@getComment').its('responseBody')
+    //             .should('have.property', 'name')
+    //             .and('include', 'Using fixtures to represent data')
 
-            // you can also just write the fixture in the route
-            cy.route(/comments/, 'fixture:example.json').as('getComment')
+    //         // you can also just write the fixture in the route
+    //         cy.route(/comments/, 'fixture:example.json').as('getComment')
 
-            // we have code that gets a comment when
-            // the button is clicked in scripts.js
-            cy.get('.fixture-btn').click()
+    //         // we have code that gets a comment when
+    //         // the button is clicked in scripts.js
+    //         cy.get('.fixture-btn').click()
 
-            cy.wait('@getComment').its('responseBody')
-                .should('have.property', 'name')
-                .and('include', 'Using fixtures to represent data')
+    //         cy.wait('@getComment').its('responseBody')
+    //             .should('have.property', 'name')
+    //             .and('include', 'Using fixtures to represent data')
 
-            // or write fx to represent fixture
-            // by default it assumes it's .json
-            cy.route(/comments/, 'fx:example').as('getComment')
+    //         // or write fx to represent fixture
+    //         // by default it assumes it's .json
+    //         cy.route(/comments/, 'fx:example').as('getComment')
 
-            // we have code that gets a comment when
-            // the button is clicked in scripts.js
-            cy.get('.fixture-btn').click()
+    //         // we have code that gets a comment when
+    //         // the button is clicked in scripts.js
+    //         cy.get('.fixture-btn').click()
 
-            cy.wait('@getComment').its('responseBody')
-                .should('have.property', 'name')
-                .and('include', 'Using fixtures to represent data')
-        })
+    //         cy.wait('@getComment').its('responseBody')
+    //             .should('have.property', 'name')
+    //             .and('include', 'Using fixtures to represent data')
+    //     })
 
         it('cy.readFile() - read a files contents', function () {
             // You can read a file and yield its contents
@@ -1331,135 +1331,135 @@ describe('Kitchen Sink', function () {
     })
 
 
-    context('Cypress.config()', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/cypress-api/config')
-        })
+    // context('Cypress.config()', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/cypress-api/config')
+    //     })
 
-        it('Cypress.config() - get and set configuration options', function () {
-            // https://on.cypress.io/config
-            var myConfig = Cypress.config()
+    //     it('Cypress.config() - get and set configuration options', function () {
+    //         // https://on.cypress.io/config
+    //         var myConfig = Cypress.config()
 
-            expect(myConfig).to.have.property('animationDistanceThreshold', 5)
-            expect(myConfig).to.have.property('baseUrl', null)
-            expect(myConfig).to.have.property('defaultCommandTimeout', 4000)
-            expect(myConfig).to.have.property('requestTimeout', 5000)
-            expect(myConfig).to.have.property('responseTimeout', 30000)
-            expect(myConfig).to.have.property('viewportHeight', 660)
-            expect(myConfig).to.have.property('viewportWidth', 1000)
-            expect(myConfig).to.have.property('pageLoadTimeout', 60000)
-            expect(myConfig).to.have.property('waitForAnimations', true)
+    //         expect(myConfig).to.have.property('animationDistanceThreshold', 5)
+    //         expect(myConfig).to.have.property('baseUrl', null)
+    //         expect(myConfig).to.have.property('defaultCommandTimeout', 4000)
+    //         expect(myConfig).to.have.property('requestTimeout', 5000)
+    //         expect(myConfig).to.have.property('responseTimeout', 30000)
+    //         expect(myConfig).to.have.property('viewportHeight', 660)
+    //         expect(myConfig).to.have.property('viewportWidth', 1000)
+    //         expect(myConfig).to.have.property('pageLoadTimeout', 60000)
+    //         expect(myConfig).to.have.property('waitForAnimations', true)
 
-            expect(Cypress.config('pageLoadTimeout')).to.eq(60000)
+    //         expect(Cypress.config('pageLoadTimeout')).to.eq(60000)
 
-            // this will change the config for the rest of your tests!
-            Cypress.config('pageLoadTimeout', 20000)
+    //         // this will change the config for the rest of your tests!
+    //         Cypress.config('pageLoadTimeout', 20000)
 
-            expect(Cypress.config('pageLoadTimeout')).to.eq(20000)
+    //         expect(Cypress.config('pageLoadTimeout')).to.eq(20000)
 
-            Cypress.config('pageLoadTimeout', 60000)
-        })
-    })
+    //         Cypress.config('pageLoadTimeout', 60000)
+    //     })
+    // })
 
-    context('Cypress.env()', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/cypress-api/env')
-        })
+    // context('Cypress.env()', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/cypress-api/env')
+    //     })
 
-        // We can set environment variables for highly dynamic values
+    //     // We can set environment variables for highly dynamic values
 
-        // https://on.cypress.io/environment-variables
-        it('Cypress.env() - get environment variables', function () {
-            // https://on.cypress.io/env
-            // set multiple environment variables
-            Cypress.env({
-                host: 'veronica.dev.local',
-                api_server: 'http://localhost:8888/v1/'
-            })
+    //     // https://on.cypress.io/environment-variables
+    //     it('Cypress.env() - get environment variables', function () {
+    //         // https://on.cypress.io/env
+    //         // set multiple environment variables
+    //         Cypress.env({
+    //             host: 'veronica.dev.local',
+    //             api_server: 'http://localhost:8888/v1/'
+    //         })
 
-            // get environment variable
-            expect(Cypress.env('host')).to.eq('veronica.dev.local')
+    //         // get environment variable
+    //         expect(Cypress.env('host')).to.eq('veronica.dev.local')
 
-            // set environment variable
-            Cypress.env('api_server', 'http://localhost:8888/v2/')
-            expect(Cypress.env('api_server')).to.eq('http://localhost:8888/v2/')
+    //         // set environment variable
+    //         Cypress.env('api_server', 'http://localhost:8888/v2/')
+    //         expect(Cypress.env('api_server')).to.eq('http://localhost:8888/v2/')
 
-            // get all environment variable
-            expect(Cypress.env()).to.have.property('host', 'veronica.dev.local')
-            expect(Cypress.env()).to.have.property('api_server', 'http://localhost:8888/v2/')
-        })
-    })
+    //         // get all environment variable
+    //         expect(Cypress.env()).to.have.property('host', 'veronica.dev.local')
+    //         expect(Cypress.env()).to.have.property('api_server', 'http://localhost:8888/v2/')
+    //     })
+    // })
 
-    context('Cypress.Cookies', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/cypress-api/cookies')
-        })
+    // context('Cypress.Cookies', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/cypress-api/cookies')
+    //     })
 
-        // https://on.cypress.io/cookies
-        it('Cypress.Cookies.debug() - enable or disable debugging', function () {
-            Cypress.Cookies.debug(true)
+    //     // https://on.cypress.io/cookies
+    //     it('Cypress.Cookies.debug() - enable or disable debugging', function () {
+    //         Cypress.Cookies.debug(true)
 
-            // Cypress will now log in the console when
-            // cookies are set or cleared
-            cy.setCookie('fakeCookie', '123ABC')
-            cy.clearCookie('fakeCookie')
-            cy.setCookie('fakeCookie', '123ABC')
-            cy.clearCookie('fakeCookie')
-            cy.setCookie('fakeCookie', '123ABC')
-        })
+    //         // Cypress will now log in the console when
+    //         // cookies are set or cleared
+    //         cy.setCookie('fakeCookie', '123ABC')
+    //         cy.clearCookie('fakeCookie')
+    //         cy.setCookie('fakeCookie', '123ABC')
+    //         cy.clearCookie('fakeCookie')
+    //         cy.setCookie('fakeCookie', '123ABC')
+    //     })
 
-        it('Cypress.Cookies.preserveOnce() - preserve cookies by key', function () {
-            // normally cookies are reset after each test
-            cy.getCookie('fakeCookie').should('not.be.ok')
+    //     it('Cypress.Cookies.preserveOnce() - preserve cookies by key', function () {
+    //         // normally cookies are reset after each test
+    //         cy.getCookie('fakeCookie').should('not.be.ok')
 
-            // preserving a cookie will not clear it when
-            // the next test starts
-            cy.setCookie('lastCookie', '789XYZ')
-            Cypress.Cookies.preserveOnce('lastCookie')
-        })
+    //         // preserving a cookie will not clear it when
+    //         // the next test starts
+    //         cy.setCookie('lastCookie', '789XYZ')
+    //         Cypress.Cookies.preserveOnce('lastCookie')
+    //     })
 
-        it('Cypress.Cookies.defaults() - set defaults for all cookies', function () {
-            // now any cookie with the name 'session_id' will
-            // not be cleared before each new test runs
-            Cypress.Cookies.defaults({
-                whitelist: 'session_id'
-            })
-        })
-    })
+    //     it('Cypress.Cookies.defaults() - set defaults for all cookies', function () {
+    //         // now any cookie with the name 'session_id' will
+    //         // not be cleared before each new test runs
+    //         Cypress.Cookies.defaults({
+    //             whitelist: 'session_id'
+    //         })
+    //     })
+    // })
 
-    context('Cypress.dom', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/cypress-api/dom')
-        })
+    // context('Cypress.dom', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/cypress-api/dom')
+    //     })
 
-        // https://on.cypress.io/dom
-        it('Cypress.dom.isHidden() - determine if a DOM element is hidden', function () {
-            var hiddenP = Cypress.$('.dom-p p.hidden').get(0)
-            var visibleP = Cypress.$('.dom-p p.visible').get(0)
+    //     // https://on.cypress.io/dom
+    //     it('Cypress.dom.isHidden() - determine if a DOM element is hidden', function () {
+    //         var hiddenP = Cypress.$('.dom-p p.hidden').get(0)
+    //         var visibleP = Cypress.$('.dom-p p.visible').get(0)
 
-            // our first paragraph has css class 'hidden'
-            expect(Cypress.dom.isHidden(hiddenP)).to.be.true
-            expect(Cypress.dom.isHidden(visibleP)).to.be.false
-        })
-    })
+    //         // our first paragraph has css class 'hidden'
+    //         expect(Cypress.dom.isHidden(hiddenP)).to.be.true
+    //         expect(Cypress.dom.isHidden(visibleP)).to.be.false
+    //     })
+    // })
 
-    context('Cypress.Server', function () {
-        beforeEach(function () {
-            cy.visit('https://example.cypress.io/cypress-api/server')
-        })
+    // context('Cypress.Server', function () {
+    //     beforeEach(function () {
+    //         cy.visit('https://example.cypress.io/cypress-api/server')
+    //     })
 
-        // Permanently override server options for
-        // all instances of cy.server()
+    //     // Permanently override server options for
+    //     // all instances of cy.server()
 
-        // https://on.cypress.io/cypress-server
-        it('Cypress.Server.defaults() - change default config of server', function () {
-            Cypress.Server.defaults({
-                delay: 0,
-                force404: false,
-                whitelist: function (xhr) {
-                    // handle custom logic for whitelisting
-                }
-            })
-        })
-    })
+    //     // https://on.cypress.io/cypress-server
+    //     it('Cypress.Server.defaults() - change default config of server', function () {
+    //         Cypress.Server.defaults({
+    //             delay: 0,
+    //             force404: false,
+    //             whitelist: function (xhr) {
+    //                 // handle custom logic for whitelisting
+    //             }
+    //         })
+    //     })
+    // })
 })
