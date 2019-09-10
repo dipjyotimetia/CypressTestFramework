@@ -17,7 +17,8 @@
   "keywords": [
     "node",
     "cypress",
-    "test"
+    "test",
+    "javascript"
   ],
   "author": "Dipjyoti Metia",
   "license": "MIT",
