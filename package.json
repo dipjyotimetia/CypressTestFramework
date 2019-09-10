@@ -9,8 +9,8 @@
     "generate-report": "marge mochareports/*.json -f report -o mochareports",
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
-    "cy:run": "cypress run --headed integration/example_spec.js",
-    "cy:ci": "cypress run integration/example_spec.js",
+    "cy:run": "cypress run --headed --spec 'cypress/integration/example_spec.js'",
+    "cy:ci": "cypress run --spec 'cypress/integration/example_spec.js'",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
     "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
   },
