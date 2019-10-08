@@ -1,14 +1,12 @@
 /// <reference types="Cypress" />
 
-describe.skip('Testing the hero list page', function () {
+import { loginPage } from "../support/pageObjects/login_page";
 
-    it('Beteasy', () => {
-        cy.visit('https://beteasy.com.au/')
-            .screenshot()
-            .type('','')
-            .wait(1000)
-            .writeFile('')
-            .trigger('mouseover')
+describe('Testing BetEasy Web', function () {
+
+    it('BetEasy Login', () => {
+        loginPage.navigateToUrl('https://beteasy.com.au');
+        loginPage.login('', '');
     });
 
     // Cypress.Commands.add("state", (...states) => {
