@@ -10,7 +10,7 @@
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
     "cy:run": "cypress run --headed --spec 'cypress/integration/sample_spec.js'",
-    "cy:azure": "cypress run --spec 'cypress/integration/example_spec.js.js'",
+    "cy:azure": "cypress run --spec 'cypress/integration/example_spec.js'",
     "cy:ci": "cypress run --spec 'cypress/integration/example_spec.js'",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
     "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
