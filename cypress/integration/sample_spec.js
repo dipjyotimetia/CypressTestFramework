@@ -9,12 +9,4 @@ describe('Testing BetEasy Web', function () {
         loginPage.login('', '');
     });
 
-    // Cypress.Commands.add("state", (...states) => {
-    //     cy.request({
-    //         url: `${Cypress.env('BASE_API')}/integration/state`,
-    //         method: 'POST',
-    //         headers: { 'content-type': 'application/json' },
-    //         body: JSON.stringify({ states: states })
-    //     });
-    // });
 });

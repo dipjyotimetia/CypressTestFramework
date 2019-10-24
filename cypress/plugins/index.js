@@ -1,12 +1,12 @@
 const ntlmAuth = require('cypress-ntlm-auth/dist/plugin');
 
-import { readJson } from "fs-extra";
-import { resolve } from "path";
+const fs = require('fs-extra');
+const path = require('path');
 
 const getConfigurationByFile = (file) => {
-  const pathToConfigFile = resolve('..', 'cypress/config', `${file}.json`)
+  const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`)
 
-  return readJson(pathToConfigFile)
+  return fs.readJson(pathToConfigFile)
 }
 
 module.exports = (on, config) => {
@@ -21,7 +21,7 @@ module.exports = (on, config) => {
       return args
     }
 
-    const file = config.env.configFile || 'development'
+    const file = config.env.configFile || 'test'
 
     return getConfigurationByFile(file)
   })

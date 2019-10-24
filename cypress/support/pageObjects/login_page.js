@@ -7,7 +7,8 @@ const loginButton = 'button[data-testid="submitLoginDropDownContent"]';
 export const loginPage = {
 
     navigateToUrl(url) {
-        cy.visit(url);
+        cy.visit(url)
+          .viewport('macbook-15');
     },
 
     login(UserName, Password) {
