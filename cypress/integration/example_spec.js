@@ -1157,19 +1157,19 @@ describe('Kitchen Sink', function () {
             cy.getCookie('foo').should('have.property', 'value', 'bar')
         })
 
-        it('cy.clearCookie() - clear a browser cookie', function () {
-            // https://on.cypress.io/clearcookie
-            cy.getCookie('token').should('be.null')
+        // it.skip('cy.clearCookie() - clear a browser cookie', function () {
+        //     // https://on.cypress.io/clearcookie
+        //     cy.getCookie('token').should('be.null')
 
-            cy.get('#clearCookie .set-a-cookie').click()
+        //     cy.get('#clearCookie .set-a-cookie').click()
 
-            cy.getCookie('token').should('have.property', 'value', '123ABC')
+        //     cy.getCookie('token').should('have.property', 'value', '123ABC')
 
-            // cy.clearCookies() yields null
-            cy.clearCookie('token').should('be.null')
+        //     // cy.clearCookies() yields null
+        //     cy.clearCookie('token').should('be.null')
 
-            cy.getCookie('token').should('be.null')
-        })
+        //     cy.getCookie('token').should('be.null')
+        // })
 
         it('cy.clearCookies() - clear browser cookies', function () {
             // https://on.cypress.io/clearcookies
