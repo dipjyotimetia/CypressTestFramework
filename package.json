@@ -28,18 +28,17 @@
     "bluebird": "3.7.1",
     "chalk": "2.4.2",
     "cross-env": "6.0.3",
-    "cypress": "^3.6.0",
+    "cypress": "^3.6.1",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
     "date-fns": "2.6.0",
-    "uuid": "3.3.3",
-    "winston": "^3.2.1"
+    "uuid": "3.3.3"
   },
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
     "concurrently": "^5.0.0",
     "cypress-dark": "^1.7.14",
-    "cypress-file-upload": "^3.4.0",
+    "cypress-file-upload": "^3.5.0",
     "cypress-multi-reporters": "1.2.3",
     "cypress-ntlm-auth": "^2.0.2",
     "cypress-plugin-retries": "^1.4.0",
