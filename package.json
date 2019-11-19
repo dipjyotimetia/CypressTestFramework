@@ -26,12 +26,12 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "3.7.1",
-    "chalk": "2.4.2",
+    "chalk": "3.0.0",
     "cross-env": "6.0.3",
     "cypress": "^3.6.1",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
-    "date-fns": "2.6.0",
+    "date-fns": "^2.7.0",
     "uuid": "3.3.3"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "eslint-plugin-cypress": "^2.7.0",
     "mocha": "6.2.2",
     "mochawesome": "4.1.0",
-    "mochawesome-merge": "2.0.1",
+    "mochawesome-merge": "2.1.0",
     "mochawesome-report-generator": "4.0.1",
     "start-server-and-test": "^1.10.6",
     "fs-extra": "8.1.0"
