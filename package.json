@@ -36,11 +36,11 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.0.1",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^3.5.0",
     "cypress-multi-reporters": "1.2.3",
-    "cypress-ntlm-auth": "^2.0.4",
+    "cypress-ntlm-auth": "^2.0.5",
     "cypress-plugin-retries": "^1.5.0",
     "cypress-xpath": "^1.4.0",
     "eslint-plugin-cypress": "^2.7.0",
