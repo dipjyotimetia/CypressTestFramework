@@ -1,0 +1,23 @@
+{
+    "result": {
+        "userHeader": {
+            "balance": 7094.73,
+            "bettingBalance": 7094.73,
+            "pendingBets": 1,
+            "CrownMembershipLinked": false,
+            "ResidentialPostCode": "3000",
+            "Title": "",
+            "Surname": "Test_Metia",
+            "MiddleName": "",
+            "FirstName": "Test_Dipjyoti"
+        },
+        "html": {
+            "top-menu": "<ul>\n    <li><a class=\"racing-nav \" href=\"\/racing-betting\">\n        <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#racing-icon\"><\/use><\/svg>\n        <div>Racing<\/div><\/a>\n    <\/li>\n    <li><a class=\"sports-nav \" href=\"\/sports-betting\">\n        <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#sports-icon\"><\/use><\/svg>\n        <div>Sports<\/div><\/a>\n    <\/li>\n        <li>\n    <a class=\"live-betting-nav \" href=\"\/live-in-play-betting\">\n        <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#stopwatch\"><\/use><\/svg>\n        <div>Live Betting<\/div>\n    <\/a>\n<\/li>\n\n        <li><a class=\"multi-express-nav \"\n        href=\"\/multi-express\">\n        <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#multi-express-icon\"><\/use><\/svg>\n        <div>Multi Express<\/div>\n    <\/a><\/li>\n\n\n\n<li>\n    <a class=\"rewards-nav \"\n       href=\"\/rewards\">\n        <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#rewards\"><\/use><\/svg>\n        <div>Rewards<\/div>\n    <\/a>\n<\/li>\n\n<li><a class=\"promotions-nav \"\n    href=\"\/betting-promotions\">\n    <svg role=\"presentation\" class=\"sprite-icon-nav\"><use xlink:href=\"#promotions\"><\/use><\/svg>\n    <div>Promotions<\/div>\n<\/a><\/li>\n\n\n<\/ul>\n"
+        },
+        "customerType": "2",
+        "ShowWelcomeBack": false,
+        "JsonTakeABreakOptions": null,
+        "isBoostEligible": false
+    },
+    "success": true
+}

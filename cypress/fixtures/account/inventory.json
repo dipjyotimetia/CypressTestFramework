@@ -1,0 +1,99 @@
+{
+    "TotalInventoryCount": 20,
+    "Promotions": {
+        "Deposit": {
+            "IsEligible": true,
+            "IsAvailable": false,
+            "TotalAvailable": 0,
+            "Items": []
+        },
+        "DoubleWinnings": {
+            "IsEligible": true,
+            "IsAvailable": false,
+            "TotalAvailable": 0,
+            "Items": []
+        },
+        "MoneyBack": {
+            "IsEligible": true,
+            "IsAvailable": true,
+            "TotalAvailable": 2,
+            "Items": [
+                {
+                    "PromotionID": 28784,
+                    "PromotionName": "ANY RACE: Apply your allocated Bet Return - Run 2nd/3rd - stake returned up to $25 in Bonus Bets",
+                    "Description": "x Today's Racing Only (min. 8 runners)",
+                    "AvailablePromotions": 2,
+                    "Expiry": "2020-01-05T12:59:59Z",
+                    "Grouping": "MoneyBack",
+                    "Url": "/racing-betting/horse-racing"
+                }
+            ]
+        }
+    },
+    "ContextPromotions": {
+        "Racing": {
+            "Thoroughbreds": {
+                "Type": "MoneyBack",
+                "Description": "ANY RACE: Apply your allocated Bet Return - Run 2nd/3rd - stake returned up to $25 in Bonus Bets",
+                "Expiry": "2020-01-05T12:59:59Z"
+            },
+            "Harness": {
+                "Type": "MoneyBack",
+                "Description": "ANY RACE: Apply your allocated Bet Return - Run 2nd/3rd - stake returned up to $25 in Bonus Bets",
+                "Expiry": "2020-01-05T12:59:59Z"
+            },
+            "Greyhounds": {
+                "Type": "MoneyBack",
+                "Description": "ANY RACE: Apply your allocated Bet Return - Run 2nd/3rd - stake returned up to $25 in Bonus Bets",
+                "Expiry": "2020-01-05T12:59:59Z"
+            }
+        }
+    },
+    "FreeBetBoost": {
+        "IsEligible": true,
+        "IsAvailable": true,
+        "TotalAvailable": 8,
+        "Items": [
+            {
+                "ReferenceID": 22489,
+                "Quantity": 3,
+                "BoostType": "Exotics",
+                "ExpiresBy": "2020-01-05T12:59:59Z",
+                "Url": "/racing-betting",
+                "PromotionName": "Exotics Boost",
+                "Description": ""
+            },
+            {
+                "ReferenceID": 22491,
+                "Quantity": 1,
+                "BoostType": "Multi",
+                "ExpiresBy": "2020-01-05T12:59:59Z",
+                "Url": "/sports-betting",
+                "PromotionName": "Multi Boost"
+            },
+            {
+                "ReferenceID": 22493,
+                "Quantity": 1,
+                "BoostType": "Racing",
+                "ExpiresBy": "2020-01-05T12:59:59Z",
+                "Url": "/racing-betting",
+                "PromotionName": "Racing Boost"
+            },
+            {
+                "ReferenceID": 25923,
+                "Quantity": 3,
+                "BoostType": "Same Game Multi",
+                "ExpiresBy": "2020-01-05T12:59:59Z",
+                "Url": "/sports-betting",
+                "PromotionName": "Same Game Multi Boost",
+                "Description": "SGM"
+            }
+        ]
+    },
+    "BonusBets": {
+        "IsEligible": true,
+        "IsAvailable": false,
+        "TotalAvailable": 0,
+        "Items": []
+    }
+}

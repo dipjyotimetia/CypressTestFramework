@@ -1,5 +1,7 @@
 {
-  "env":{
-
+  "env": {
+    "BASE_URL": "",
+    "USERNAME": "",
+    "PASSWORD": ""
   }
 }
