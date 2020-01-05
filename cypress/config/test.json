@@ -1,6 +1,6 @@
 {
   "env": {
-    "BASE_URL": "",
+    "BASE_URL": "https://beteasy.com.au",
     "USERNAME": "",
     "PASSWORD": ""
   }

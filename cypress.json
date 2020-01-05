@@ -2,9 +2,18 @@
   "chromeWebSecurity": false,
   "screenshotsFolder": "cypress/screenshots",
   "reporter": "cypress-multi-reporters",
+  "fixturesFolder": "cypress/fixtures",
+  "integrationFolder": "cypress/integration",
+  "pageLoadTimeout": 60000,
+  "execTimeout": 60000,
+  "waitForAnimations": true,
+  "watchForFileChanges": false,
+  "videosFolder": "cypress/videos",
+  "trashAssetsBeforeRuns": true,
+  "supportFile": "cypress/support/index.js",
+  "pluginsFile": "cypress/plugins/index.js",
   "reporterOptions": {
-    "configFile":"reporterOptions.json"
+    "configFile": "reporterOptions.json"
   },
-  "theme":"dark",
   "projectId": "vfepbj"
 }
