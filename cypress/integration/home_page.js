@@ -1,6 +1,6 @@
-import { navHeader } from '../support/pageObjects/nav_header';
-import { searchArea } from '../support/pageObjects/search_area';
-import { homePage } from '../support/pageObjects/home_page';
+import { navHeader } from '../pageObjects/nav_header';
+import { searchArea } from '../pageObjects/search_area';
+import { homePage } from '../pageObjects/home_page';
 
 describe.skip('Home page test', () => {
     beforeEach(function () {

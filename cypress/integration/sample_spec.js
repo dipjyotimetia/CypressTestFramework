@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { loginPage } from "../support/pageObjects/login_page";
+import { loginPage } from "../pageObjects/login_page";
 import { BASE_URL, USERNAME, PASSWORD } from "../config/config";
 
 describe('Testing BetEasy Web', function () {
