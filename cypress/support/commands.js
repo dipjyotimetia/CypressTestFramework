@@ -9,3 +9,10 @@ Cypress.Commands.add("login", (...states) => {
         body: JSON.stringify({ states: states })
     });
 });
+
+/**
+ * Clear mock server
+ */
+Cypress.Commands.add('clearMock', () => {
+    cy.server({ enable: false });
+})
