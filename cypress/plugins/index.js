@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const timeStamp = require('date-fns');
-const { install, ensureRequiredBrowserFlags } = require('@neuralegion/cypress-har-generator');
+//const { install, ensureRequiredBrowserFlags } = require('@neuralegion/cypress-har-generator');
 
 let logTime = timeStamp.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
@@ -12,11 +12,11 @@ const getConfigurationByFile = (file) => {
 }
 
 module.exports = (on, config) => {
-  install(on,config);
+  //install(on,config);
   // require('cypress-plugin-retries/lib/plugin')(on)
 
   on('before:browser:launch', (browser = {}, args) => {
-    ensureRequiredBrowserFlags(browser,args);
+    //ensureRequiredBrowserFlags(browser,args);
     if (browser.name === 'chrome') {
       args.push('--start-fullscreen')
       args.push('--no-sandbox')
