@@ -28,21 +28,21 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "chalk": "3.0.0",
-    "cross-env": "6.0.3",
+    "cross-env": "7.0.0",
     "cypress": "^3.8.3",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
     "date-fns": "^2.9.0",
-    "uuid": "3.3.3",
-    "rimraf": "3.0.0"
+    "uuid": "3.4.0",
+    "rimraf": "3.0.1"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.0.2",
-    "concurrently": "^5.0.2",
+    "@testing-library/cypress": "^5.2.1",
+    "concurrently": "^5.1.0",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^3.5.3",
     "cypress-multi-reporters": "1.2.3",
-    "cypress-ntlm-auth": "^2.1.0",
+    "cypress-ntlm-auth": "^2.2.0",
     "cypress-plugin-retries": "^1.5.2",
     "cypress-xpath": "^1.4.0",
     "eslint-plugin-cypress": "^2.8.1",
@@ -50,7 +50,7 @@
     "mochawesome": "4.1.0",
     "mochawesome-merge": "4.0.0",
     "mochawesome-report-generator": "4.1.0",
-    "start-server-and-test": "^1.10.6",
+    "start-server-and-test": "^1.10.8",
     "fs-extra": "8.1.0"
   },
   "repository": {}
