@@ -15,17 +15,17 @@ module.exports = (on, config) => {
   //install(on,config);
   // require('cypress-plugin-retries/lib/plugin')(on)
 
-  on('before:browser:launch', (browser = {}, args) => {
+  on('before:browser:launch', (browser = {}, launchOptions) => {
     //ensureRequiredBrowserFlags(browser,args);
     if (browser.name === 'chrome') {
-      args.push('--start-fullscreen')
-      args.push('--no-sandbox')
-      args.push('--disable-gpu')
+      launchOptions.args.push('--start-fullscreen')
+      launchOptions.args.push('--no-sandbox')
+      launchOptions.args.push('--disable-gpu')
       return args;
     }
 
     if (browser.name === 'electron') {
-      args.fullscreen = true;
+      launchOptions.args.fullscreen = true;
 
       return args;
     }
