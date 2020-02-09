@@ -21,13 +21,13 @@ module.exports = (on, config) => {
       launchOptions.args.push('--start-fullscreen')
       launchOptions.args.push('--no-sandbox')
       launchOptions.args.push('--disable-gpu')
-      return args;
+      return launchOptions;
     }
 
     if (browser.name === 'electron') {
       launchOptions.args.fullscreen = true;
 
-      return args;
+      return launchOptions;
     }
   });
 
