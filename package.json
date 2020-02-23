@@ -15,10 +15,8 @@
     "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/sample_spec.js'",
     "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/sample_spec.js'",
     "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/sample_spec.js'",
-    "cy:azure": "cypress run --spec 'cypress/integration/example_spec.js'",
     "cy:ci": "cypress run --spec 'cypress/integration/example_spec.js'",
-    "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
-    "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
+    "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
   },
   "keywords": [
     "node",
@@ -29,10 +27,10 @@
   "author": "Dipjyoti Metia",
   "license": "MIT",
   "dependencies": {
+    "cypress": "^4.0.2",
     "bluebird": "^3.7.2",
     "chalk": "3.0.0",
     "cross-env": "7.0.0",
-    "cypress": "^4.0.1",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
     "date-fns": "^2.9.0",
@@ -45,16 +43,15 @@
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^3.5.3",
     "cypress-multi-reporters": "1.2.4",
-    "cypress-ntlm-auth": "^2.2.1",
+    "cypress-ntlm-auth": "^2.2.3",
     "cypress-plugin-retries": "^1.5.2",
     "cypress-xpath": "^1.4.0",
-    "eslint-plugin-cypress": "^2.9.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "mocha": "7.0.1",
     "mochawesome": "4.1.0",
     "mochawesome-merge": "4.0.0",
     "mochawesome-report-generator": "4.1.0",
     "start-server-and-test": "^1.10.8",
     "fs-extra": "8.1.0"
-  },
-  "repository": {}
+  }
 }
