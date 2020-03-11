@@ -18,8 +18,8 @@ pipeline {
     stage('build') {
       steps {
         echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        bat 'npm ci'
-        bat 'npx cypress verify'
+        sh 'npm ci'
+        sh 'npx cypress verify'
       }
     }
 
@@ -29,7 +29,7 @@ pipeline {
         }
         steps {
           echo "Running tests ${env.BUILD_ID} on ${env.JENKINS_URL}"
-          bat 'npm run chrome:ci'
+          sh 'npm run chrome:ci'
         }
       }
   }
@@ -37,9 +37,9 @@ pipeline {
     post {
       always {
         script{
-          bat 'npm run combine-reports'
-          bat 'npm run generate-report'
-          bat 'npm run clean'
+          sh 'npm run combine-reports'
+          sh 'npm run generate-report'
+          sh 'npm run clean'
         }
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'results', reportFiles: 'report.html', reportName: 'WebUi Test Report', reportTitles: ''])
       }
