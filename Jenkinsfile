@@ -34,14 +34,14 @@ pipeline {
       }
   }
 
-    post {
-      always {
-        script{
-          sh 'npm run combine-reports'
-          sh 'npm run generate-report'
-          sh 'npm run clean'
-        }
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'results', reportFiles: 'report.html', reportName: 'WebUi Test Report', reportTitles: ''])
-      }
-    }
+    // post {
+    //   always {
+    //     script{
+    //       sh 'npm run combine-reports'
+    //       sh 'npm run generate-report'
+    //       sh 'npm run clean'
+    //     }
+    //     publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'results', reportFiles: 'report.html', reportName: 'WebUi Test Report', reportTitles: ''])
+    //   }
+    // }
 }
