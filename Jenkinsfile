@@ -2,11 +2,11 @@ String cypressBaseImage = 'cypress/base:12.6.0'
 String cypressBrowsersImage = 'cypress/browsers:node12.14.0-chrome79-ff71'
 
 pipeline {
-  agent {
-    docker {
-      image "${cypressBrowsersImage}"
-    }
-  }
+  // agent {
+  //   docker {
+  //     image "${cypressBrowsersImage}"
+  //   }
+  // }
 
   stages {
 
