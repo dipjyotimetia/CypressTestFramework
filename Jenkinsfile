@@ -7,6 +7,11 @@ pipeline {
   //     image "${cypressBrowsersImage}"
   //   }
   // }
+  agent {
+        dockerfile {
+            filename 'Dockerfile'
+        }
+    }
 
   stages {
 
