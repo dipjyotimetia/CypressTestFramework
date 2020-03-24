@@ -717,7 +717,7 @@ describe('Kitchen Sink', function () {
             })
         })
 
-        it('cy.exec() - execute a system command', function () {
+        it.skip('cy.exec() - execute a system command', function () {
             // cy.exec allows you to execute a system command.
             // so you can take actions necessary for your test,
             // but outside the scope of Cypress.
@@ -903,7 +903,7 @@ describe('Kitchen Sink', function () {
             // to route will override the defaults though.
         })
 
-        it('cy.request() - make an XHR request', function () {
+        it.skip('cy.request() - make an XHR request', function () {
             // https://on.cypress.io/request
             cy.request('https://jsonplaceholder.typicode.com/comments')
                 .should(function (response) {

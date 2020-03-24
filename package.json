@@ -27,31 +27,32 @@
   "author": "Dipjyoti Metia",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^4.1.0",
+    "cypress": "^4.2.0",
     "bluebird": "^3.7.2",
     "chalk": "3.0.0",
-    "cross-env": "7.0.0",
+    "cross-env": "7.0.2",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
-    "date-fns": "^2.10.0",
-    "uuid": "7.0.1",
+    "date-fns": "^2.11.0",
+    "uuid": "7.0.2",
     "rimraf": "3.0.2"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.3.0",
+    "@neuralegion/cypress-har-generator": "^4.0.0",
+    "@testing-library/cypress": "^6.0.0",
     "concurrently": "^5.1.0",
     "cypress-dark": "^1.7.14",
-    "cypress-file-upload": "^3.5.3",
+    "cypress-file-upload": "^4.0.4",
     "cypress-multi-reporters": "1.2.4",
-    "cypress-ntlm-auth": "^2.2.3",
+    "cypress-ntlm-auth": "^2.2.5",
     "cypress-plugin-retries": "^1.5.2",
     "cypress-xpath": "^1.4.0",
     "eslint-plugin-cypress": "^2.10.3",
-    "mocha": "7.1.0",
+    "fs-extra": "9.0.0",
+    "mocha": "7.1.1",
     "mochawesome": "5.0.0",
-    "mochawesome-merge": "4.0.1",
+    "mochawesome-merge": "4.0.3",
     "mochawesome-report-generator": "4.1.0",
-    "start-server-and-test": "^1.10.8",
-    "fs-extra": "8.1.0"
+    "start-server-and-test": "^1.10.11"
   }
 }

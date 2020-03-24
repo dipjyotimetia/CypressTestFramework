@@ -2,6 +2,8 @@ require('cypress-xpath');
 import './commands';
 import 'cypress-ntlm-auth/dist/commands';
 require('cypress-plugin-retries');
+require('@neuralegion/cypress-har-generator/commands');
+
 const addContext = require('mochawesome/addContext');
 
 Cypress.on('test:after:run', (test, runnable) => {

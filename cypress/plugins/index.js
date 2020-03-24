@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const timeStamp = require('date-fns');
-//const { install, ensureRequiredBrowserFlags } = require('@neuralegion/cypress-har-generator');
+const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 
 let logTime = timeStamp.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
@@ -12,11 +12,12 @@ const getConfigurationByFile = (file) => {
 }
 
 module.exports = (on, config) => {
-  //install(on,config);
-  // require('cypress-plugin-retries/lib/plugin')(on)
+  install(on, config);
+
+  require('cypress-plugin-retries/lib/plugin')(on)
 
   on('before:browser:launch', (browser = {}, launchOptions) => {
-    //ensureRequiredBrowserFlags(browser,args);
+    ensureBrowserFlags(browser, launchOptions);
     if (browser.name === 'chrome') {
       launchOptions.args.push('--start-fullscreen')
       launchOptions.args.push('--no-sandbox')
@@ -42,6 +43,22 @@ module.exports = (on, config) => {
     fail(message) {
       console.log(chalk.bgRed(`    ERROR - ${logTime}; ${message}`))
       return null
+    }
+  });
+
+  on('task', {
+    updateFixture(filePath) {
+      const rawData = fs.readFileSync(filePath, 'utf8');
+      const context = JSON.parse(rawData);
+      context.FreeBetBoost.Items.find(e => e.BoostType === 'Multi').forEach(e1 => {
+        e1.PromotionName = 'Multi'
+      });
+      fs.writeFileSync(filePath, JSON.stringify(context));
+      return null
+    },
+
+    deleteFixture(filePath) {
+      fs.unlinkSync(filePath);
     }
   });
 
