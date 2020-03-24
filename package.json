@@ -38,6 +38,7 @@
     "rimraf": "3.0.2"
   },
   "devDependencies": {
+    "@cypress/skip-test": "^2.5.0",
     "@neuralegion/cypress-har-generator": "^4.0.0",
     "@testing-library/cypress": "^6.0.0",
     "concurrently": "^5.1.0",
