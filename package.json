@@ -27,7 +27,7 @@
   "author": "Dipjyoti Metia",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^4.2.0",
+    "cypress": "^4.3.0",
     "bluebird": "^3.7.2",
     "chalk": "3.0.0",
     "cross-env": "7.0.2",
