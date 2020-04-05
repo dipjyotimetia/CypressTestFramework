@@ -19,6 +19,11 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run cy:ci
         env:
           CI: true
+      - name: Percy Test
+        uses: percy/exec-action@v0.3.0
+        with:
+          command: "npm run cy:ci"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

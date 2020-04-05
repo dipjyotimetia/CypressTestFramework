@@ -2,7 +2,7 @@ describe('Kitchen Sink', function () {
     it('.should() - assert that <title> is correct', function () {
         // https://on.cypress.io/visit
         cy.visit('https://example.cypress.io')
-
+        cy.percySnapshot();
         // Here we've made our first assertion using a '.should()' command.
         // An assertion is comprised of a chainer, subject, and optional value.
 
@@ -28,7 +28,7 @@ describe('Kitchen Sink', function () {
 
         it('cy.get() - query DOM elements', function () {
             // https://on.cypress.io/get
-
+            cy.percySnapshot()
             // Get DOM elements by id
             cy.get('#query-btn').should('contain', 'Button')
 
@@ -76,7 +76,7 @@ describe('Kitchen Sink', function () {
             // https://on.cypress.io/root
             // By default, root is the document
             cy.root().should('match', 'html')
-
+            cy.percySnapshot()
             cy.get('.query-ul').within(function () {
                 // In this within, the root is now the ul DOM element
                 cy.root().should('have.class', 'query-ul')
@@ -219,6 +219,8 @@ describe('Kitchen Sink', function () {
                 // like whether the input is visible or disabled
                 .type('disabled error checking', { force: true })
                 .should('have.value', 'disabled error checking')
+            
+            cy.percySnapshot()    
         })
 
         it('.focus() - focus on a DOM element', function () {
@@ -241,6 +243,8 @@ describe('Kitchen Sink', function () {
                 .should('have.value', 'We are going to clear this text')
                 .clear()
                 .should('have.value', '')
+            
+            cy.percySnapshot();    
         })
 
         it('.submit() - submit a form', function () {
