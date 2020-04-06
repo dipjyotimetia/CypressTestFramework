@@ -16,8 +16,7 @@ jobs:
       - name: Visual Testing
         uses: percy/exec-action@v0.3.0
         with:
-          command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=CYPRESS_TOKEN --parallel"
+          command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=d47b182e-a843-40f4-b6ff-89827696ed8a --parallel"
         env:
           CI: true
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CYPRESS_TOKEN: ${{ secrets.CYPRESS_TOKEN }}
