@@ -8,10 +8,6 @@ jobs:
     container:
       image: cypress/browsers:node12.16.1-chrome80-ff73
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
