@@ -1,5 +1,5 @@
 
-FROM cypress/browsers:node12.14.0-chrome79-ff71
+FROM cypress/browsers:node12.16.1-chrome80-ff73
 WORKDIR /app
 
 # dependencies will be installed only if the package files change

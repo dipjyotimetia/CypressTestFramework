@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node12.14.0-chrome79-ff71
+      image: cypress/browsers:node12.16.1-chrome80-ff73
 
     strategy:
       matrix:

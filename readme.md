@@ -16,7 +16,7 @@
 
 #### Write Code:
 
-- Add `/// <reference types="Cypress" />` and `/// <reference types="../support" />`reference on the top, to get typed reference.
+- Add `/// <reference types="Cypress" />` and `/// <reference types="../support" />` if required `/// <reference types="cypress-downloadfile"/>` reference on the top, to get typed reference.
 - Add new spec file with the format TC00*\_SampleTest*\_spec.js
 - Write functions in PageObjects as E.g login
 - Write helper methods in _support/actions.js_
