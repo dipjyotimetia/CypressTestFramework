@@ -131,37 +131,37 @@ Cypress.Commands.add('createUser', (user) => {
     })
 })
 
-Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
-    const domain = Cypress.env('BASE_DOMAIN')
+// Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
+//     const domain = Cypress.env('BASE_DOMAIN')
 
-    if (domain === '...') {
-        url = '...'
-    }
+//     if (domain === '...') {
+//         url = '...'
+//     }
 
-    if (options.something === 'else') {
-        url = '...'
-    }
+//     if (options.something === 'else') {
+//         url = '...'
+//     }
 
-    // originalFn is the existing `visit` command that you need to call
-    // and it will receive whatever you pass in here.
-    //
-    // make sure to add a return here!
-    return originalFn(url, options)
-});
+//     // originalFn is the existing `visit` command that you need to call
+//     // and it will receive whatever you pass in here.
+//     //
+//     // make sure to add a return here!
+//     return originalFn(url, options)
+// });
 
-Cypress.Commands.overwrite('screenshot', (originalFn, subject, name, options) => {
-    // call another command, no need to return as it is managed
-    cy.get('.app')
-        .should('be.visible')
+// Cypress.Commands.overwrite('screenshot', (originalFn, subject, name, options) => {
+//     // call another command, no need to return as it is managed
+//     cy.get('.app')
+//         .should('be.visible')
 
-        // overwrite the default timeout, because screenshot does that internally
-        // otherwise the `then` is limited to the default command timeout
-        .then({ timeout: Cypress.config('responseTimeout') },
-            () => {
-                // return the original function so that cypress waits for it
-                return originalFn(subject, name, options)
-            })
-});
+//         // overwrite the default timeout, because screenshot does that internally
+//         // otherwise the `then` is limited to the default command timeout
+//         .then({ timeout: Cypress.config('responseTimeout') },
+//             () => {
+//                 // return the original function so that cypress waits for it
+//                 return originalFn(subject, name, options)
+//             })
+// });
 
 Cypress.Commands.add('setSessionStorage', (key, value) => {
     // Turn off logging of the cy.window() to command log

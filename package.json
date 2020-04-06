@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rimraf cypress/reports",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json",
-    "generate-report": "marge mochareports/*.json -f report -o mochareports",
+    "combine-reports": "mochawesome-merge ./cypress/reports/mocha/*.json > mochareports/mochawesome.json",
+    "generate-report": "marge mochareports/mochawesome.json",
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
     "cy:verify": "cypress verify",
