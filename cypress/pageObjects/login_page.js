@@ -1,4 +1,7 @@
 /// <reference types="Cypress" />
+
+import { click, enter } from "../support/actions";
+
 const loginWindow = 'button[data-testid="topbarDropDown"]';
 const userName = 'input[data-testid="emailLoginDropDownContent"]';
 const password = 'input[data-testid="passwordLoginDropDownContent"]';
@@ -13,15 +16,15 @@ export const loginPage = {
 
     login(UserName, Password) {
         cy.server()
-            .fixture('account/accountdetails').as('accountdetails')
+            // .fixture('account/accountdetails').as('accountdetails')
             .fixture('account/inventory').as('inventory')
-            .route('GET', '/api/account/detail', '@accountdetails').as('details')
-            .route('GET', '/experience/account/promotions/clientinventory', '@inventory').as('clientinventory')
-            .get(loginWindow).click()
-            .get(userName).type(UserName)
-            .get(password).type(Password)
-            .get(loginButton).click()
-            .wait('@details')
+            .route('POST', '/api/account/detail').as('details')
+            .route('GET', '/experience/account/promotions/clientinventory', '@inventory').as('clientinventory');
+        click(loginWindow);
+        enter(userName, UserName);
+        enter(password, Password);
+        click(loginButton);
+        cy.wait('@details')
             .wait('@clientinventory');
     }
 }
