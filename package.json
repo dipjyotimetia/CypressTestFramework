@@ -28,12 +28,12 @@
   "license": "MIT",
   "dependencies": {
     "axe-core": "^3.5.3",
-    "chalk": "3.0.0",
+    "chalk": "4.0.0",
     "cross-env": "7.0.2",
-    "cypress": "^4.3.0",
+    "cypress": "^4.4.0",
     "cypress-axe": "^0.8.1",
-    "cypress-downloadfile": "^1.1.5",
-    "date-fns": "^2.11.0",
+    "cypress-downloadfile": "^1.2.0",
+    "date-fns": "^2.12.0",
     "faker": "4.1.0",
     "lodash": "^4.17.15",
     "rimraf": "3.0.2",
@@ -45,7 +45,7 @@
     "@testing-library/cypress": "^6.0.0",
     "concurrently": "^5.1.0",
     "cypress-dark": "^1.7.14",
-    "cypress-file-upload": "^4.0.4",
+    "cypress-file-upload": "^4.0.6",
     "cypress-multi-reporters": "1.2.4",
     "cypress-ntlm-auth": "^2.2.5",
     "cypress-plugin-retries": "^1.5.2",
@@ -54,9 +54,9 @@
     "eslint-plugin-cypress": "^2.10.3",
     "fs-extra": "9.0.0",
     "mocha": "7.1.1",
-    "mochawesome": "5.0.0",
+    "mochawesome": "6.1.0",
     "mochawesome-merge": "4.0.3",
-    "mochawesome-report-generator": "4.1.0",
-    "start-server-and-test": "^1.10.11"
+    "mochawesome-report-generator": "5.1.0",
+    "start-server-and-test": "^1.11.0"
   }
 }
