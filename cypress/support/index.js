@@ -5,6 +5,7 @@ import 'cypress-axe'
 require('cypress-plugin-retries');
 require('@cypress/skip-test/support');
 require('@neuralegion/cypress-har-generator/commands');
+require('cypress-react-unit-test/support');
 
 const addContext = require('mochawesome/addContext');
 
