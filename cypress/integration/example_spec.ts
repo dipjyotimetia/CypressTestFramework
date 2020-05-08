@@ -679,7 +679,7 @@ describe('Kitchen Sink', function () {
                 cy.get('.assertions-p').find('p')
                     .should(function ($p) {
                         // return an array of texts from all of the p's
-                        var texts = $p.map(function (i, el) {
+                        let texts:any = $p.map(function (i, el) {
                             // https://on.cypress.io/$
                             return Cypress.$(el).text()
                         })
@@ -950,7 +950,7 @@ describe('Kitchen Sink', function () {
             cy.wait('@postComment')
 
             // get the route
-            cy.get('@postComment').then(function (xhr) {
+            cy.get('@postComment').then(function (xhr:any) {
                 expect(xhr.requestBody).to.include('email')
                 expect(xhr.requestHeaders).to.have.property('Content-Type')
                 expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.route()')
@@ -1211,11 +1211,11 @@ describe('Kitchen Sink', function () {
             // https://on.cypress.io/stub
             cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
-            var obj = {
+            let obj:any = {
                 foo() { }
             }
 
-            var stub = cy.stub(obj, 'foo').as('foo')
+            let stub = cy.stub(obj, 'foo').as('foo')
 
             obj.foo('foo', 'bar')
 

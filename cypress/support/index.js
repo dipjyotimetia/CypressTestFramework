@@ -1,13 +1,12 @@
-require('cypress-xpath');
+import 'cypress-xpath'
 import './commands';
 import 'cypress-ntlm-auth/dist/commands';
 import 'cypress-axe'
-require('cypress-plugin-retries');
-require('@cypress/skip-test/support');
-require('@neuralegion/cypress-har-generator/commands');
-require('cypress-react-unit-test/support');
-
-const addContext = require('mochawesome/addContext');
+import 'cypress-plugin-retries'
+import '@cypress/skip-test/support'
+import '@neuralegion/cypress-har-generator/commands'
+import 'cypress-react-unit-test/support'
+import addContext from 'mochawesome/addContext'
 
 Cypress.on('test:after:run', (test, runnable) => {
     if(test.state == 'failed') {

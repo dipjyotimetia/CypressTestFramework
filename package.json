@@ -11,18 +11,18 @@
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
     "cy:verify": "cypress verify",
-    "cy:run": "cypress run --headed --spec 'cypress/integration/sample_spec.js'",
-    "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/sample_spec.js'",
-    "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/sample_spec.js'",
-    "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/sample_spec.js'",
-    "cy:ci": "cypress run --spec 'cypress/integration/example_spec.js'",
+    "cy:run": "cypress run --headed --spec 'cypress/integration/sample_spec.ts'",
+    "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/sample_spec.ts'",
+    "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/sample_spec.ts'",
+    "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/sample_spec.ts'",
+    "cy:ci": "cypress run --spec 'cypress/integration/example_spec.ts'",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
   },
   "keywords": [
     "node",
     "cypress",
     "test",
-    "javascript"
+    "typescript"
   ],
   "author": "Dipjyoti Metia",
   "license": "MIT",
@@ -37,9 +37,13 @@
     "faker": "4.1.0",
     "lodash": "^4.17.15",
     "rimraf": "3.0.2",
-    "uuid": "7.0.3"
+    "uuid": "7.0.3",
+    "typescript": "3.8.3"
   },
   "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/jquery": "3.3.38",
+    "@types/mocha": "5.2.7",
     "@cypress/skip-test": "^2.5.0",
     "@neuralegion/cypress-har-generator": "^5.0.0",
     "@testing-library/cypress": "^6.0.0",
