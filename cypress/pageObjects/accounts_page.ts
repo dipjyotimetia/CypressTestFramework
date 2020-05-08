@@ -1,0 +1,1 @@
+const url = 'https://demo.bendigobank.com.au/banking/accounts'
