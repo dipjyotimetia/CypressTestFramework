@@ -9,6 +9,18 @@ declare namespace Cypress {
         clearMock(): Chainable<any>;
 
         /**
+         * Custom command to mock global feeds
+         * @example cy.mockGlobalFeeds()
+         */
+        mockGlobalFeeds(): Chainable<any>;
+        
+        /**
+         * Custom command to mock tags
+         * @example cy.mockTags()
+         */
+        mockTags(): Chainable<any>;
+
+        /**
          * Custom command to click on link
          * @example cy.clickLink('Test')
          */

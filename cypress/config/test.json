@@ -1,7 +1,7 @@
 {
   "env": {
-    "BASE_URL": "https://beteasy.com.au",
-    "USERNAME": "",
-    "PASSWORD": ""
+    "BASE_URL": "https://react-redux.realworld.io/",
+    "USERNAME": "testnewapp@gmail.com",
+    "PASSWORD": "password1"
   }
 }

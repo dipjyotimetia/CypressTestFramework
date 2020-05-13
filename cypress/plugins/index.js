@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const timeStamp = require('date-fns');
 const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 const percyHealthCheck = require("@percy/cypress/task");
-const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 
 let logTime = timeStamp.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
@@ -19,8 +19,8 @@ module.exports = (on, config) => {
   require('cypress-plugin-retries/lib/plugin')(on)
 
   on("task", percyHealthCheck);
-  on('task', {downloadFile})
-  
+  on('task', { downloadFile })
+
   on('before:browser:launch', (browser = {}, launchOptions) => {
     ensureBrowserFlags(browser, launchOptions);
     if (browser.name === 'chrome') {
