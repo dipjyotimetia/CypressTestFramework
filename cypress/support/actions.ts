@@ -410,16 +410,16 @@ export const findByDisplayValue = (displayValue, value) => {
         .type(value)
 }
 
-/**
- * Wait for function to complete
- * @param {Function} func 
- */
-export const waitForFunction = (func) => {
-    cy.waitUntil(func, {
-        interval: 100,
-        timeout: 900
-    });
-}
+// /**
+//  * Wait for function to complete
+//  * @param {Function} func 
+//  */
+// export const waitForFunction = (func) => {
+//     cy.waitUntil(func, {
+//         interval: 100,
+//         timeout: 900
+//     });
+// }
 
 /**
  * Accept Alert

@@ -1,7 +1,7 @@
 import 'cypress-file-upload';
 import '@testing-library/cypress/add-commands'
 import '@percy/cypress'
-require('cypress-downloadfile/lib/downloadFileCommand')
+import 'cypress-downloadfile/lib/downloadFileCommand'
 
 Cypress.Commands.add("login", (...states) => {
     cy.request({
@@ -18,6 +18,18 @@ Cypress.Commands.add("login", (...states) => {
 Cypress.Commands.add('clearMock', () => {
     cy.server({ enable: false });
 });
+
+Cypress.Commands.add('mockGlobalFeeds', () => {
+    cy.server()
+        .fixture('globalFeeds/feeds').as('feeds')
+        .route('GET', '/api/articles?limit=10&offset=0', '@feeds').as('globalFeed');
+})
+
+Cypress.Commands.add('mockTags', () => {
+    cy.server()
+        .fixture('tags/tags').as('tag')
+        .route('GET', '/api/tags', '@tag').as('tags');
+})
 
 Cypress.Commands.add('clickLink', (label) => {
     cy.get('a').contains(label).click()
