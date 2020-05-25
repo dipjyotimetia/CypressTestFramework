@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
+      image: cypress/browsers:node12.16.2-chrome81-ff75
 
     steps:
       - uses: actions/checkout@v1
