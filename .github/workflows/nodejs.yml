@@ -17,7 +17,7 @@ jobs:
         uses: percy/exec-action@v0.3.0
         with:
           # command: "cypress run --spec 'cypress/integration/example_spec.ts' --record --key=${{ secrets.CYPRESS_TOKEN }}"
-          command: "cypress run --spec 'cypress/integration/example_spec.ts'
+          command: "cypress run --spec 'cypress/integration/example_spec.ts'"
         env:
           CI: true
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
