@@ -12,6 +12,9 @@
   "trashAssetsBeforeRuns": true,
   "supportFile": "cypress/support/index.js",
   "pluginsFile": "cypress/plugins/index.js",
+  "experimentalFetchPolyfill": true,
+  "experimentalSourceRewriting": true,
+  "experimentalShadowDomSupport": true,
   "reporterOptions": {
     "configFile": "reporterOptions.json"
   },
