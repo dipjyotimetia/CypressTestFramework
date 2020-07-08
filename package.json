@@ -30,7 +30,7 @@
     "axe-core": "^3.5.5",
     "chalk": "4.1.0",
     "cross-env": "7.0.2",
-    "cypress": "^4.9.0",
+    "cypress": "^4.10.0",
     "cypress-axe": "^0.8.1",
     "cypress-downloadfile": "^1.2.0",
     "date-fns": "^2.14.0",
@@ -38,7 +38,7 @@
     "lodash": "^4.17.15",
     "rimraf": "3.0.2",
     "uuid": "8.2.0",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   },
   "devDependencies": {
     "@types/chai": "4.2.11",
@@ -47,7 +47,7 @@
     "@cypress/skip-test": "^2.5.0",
     "@neuralegion/cypress-har-generator": "^5.0.0",
     "@testing-library/cypress": "^6.0.0",
-    "cypress-react-unit-test": "4.8.0",
+    "cypress-react-unit-test": "4.9.0",
     "concurrently": "^5.2.0",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^4.0.7",
