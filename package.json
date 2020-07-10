@@ -35,7 +35,7 @@
     "cypress-downloadfile": "^1.2.0",
     "date-fns": "^2.14.0",
     "faker": "4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "rimraf": "3.0.2",
     "uuid": "8.2.0",
     "typescript": "3.9.6"
