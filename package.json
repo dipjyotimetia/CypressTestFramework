@@ -38,7 +38,7 @@
     "lodash": "^4.17.19",
     "rimraf": "3.0.2",
     "uuid": "8.2.0",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "devDependencies": {
     "@types/chai": "4.2.12",
