@@ -41,7 +41,7 @@
     "typescript": "3.9.6"
   },
   "devDependencies": {
-    "@types/chai": "4.2.11",
+    "@types/chai": "4.2.12",
     "@types/jquery": "3.5.0",
     "@types/mocha": "7.0.2",
     "@cypress/skip-test": "^2.5.0",
