@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@types/chai": "4.2.12",
-    "@types/jquery": "3.5.0",
+    "@types/jquery": "3.5.1",
     "@types/mocha": "8.0.1",
     "@cypress/skip-test": "^2.5.0",
     "@neuralegion/cypress-har-generator": "^5.0.0",
