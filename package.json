@@ -59,7 +59,7 @@
     "eslint-plugin-cypress": "^2.11.1",
     "fs-extra": "9.0.1",
     "knex": "0.21.2",
-    "mocha": "8.1.0",
+    "mocha": "8.1.1",
     "mochawesome": "6.1.1",
     "mochawesome-merge": "4.1.0",
     "mochawesome-report-generator": "5.1.0",
