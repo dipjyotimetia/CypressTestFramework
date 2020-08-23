@@ -16,8 +16,6 @@ const getConfigurationByFile = (file) => {
 module.exports = (on, config) => {
   install(on, config);
 
-  require('cypress-plugin-retries/lib/plugin')(on)
-
   on("task", percyHealthCheck);
   on('task', { downloadFile })
 

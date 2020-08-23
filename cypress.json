@@ -1,5 +1,9 @@
 {
   "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 3
+  },
   "screenshotsFolder": "cypress/screenshots",
   "reporter": "cypress-multi-reporters",
   "fixturesFolder": "cypress/fixtures",
@@ -18,5 +22,6 @@
   "reporterOptions": {
     "configFile": "reporterOptions.json"
   },
-  "projectId": "vfepbj"
+  "projectId": "vfepbj",
+  "blockHosts": ""
 }

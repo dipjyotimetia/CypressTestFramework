@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-
+//Required for future use
 declare namespace Cypress {
     interface Chainable {
         /**

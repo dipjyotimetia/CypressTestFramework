@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node12.16.2-chrome81-ff75
+      image: cypress/browsers:node12.18.0-chrome83-ff77
 
     steps:
       - uses: actions/checkout@v1
@@ -16,8 +16,8 @@ jobs:
       - name: Visual Testing
         uses: percy/exec-action@v0.3.0
         with:
-          # command: "cypress run --spec 'cypress/integration/example_spec.ts' --record --key=${{ secrets.CYPRESS_TOKEN }}"
-          command: "cypress run --spec 'cypress/integration/example_spec.ts'"
+          # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
+          command: "cypress run --spec 'cypress/integration/example_spec.js'"
         env:
           CI: true
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
