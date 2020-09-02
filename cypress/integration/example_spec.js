@@ -870,7 +870,7 @@ describe('Kitchen Sink', function () {
 
         // Manage AJAX / XHR requests in your app
 
-        it('cy.server() - control behavior of network requests and responses', function () {
+        it.skip('cy.server() - control behavior of network requests and responses', function () {
             // https://on.cypress.io/server
             cy.server().should(function (server) {
                 // the default options on server
