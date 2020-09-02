@@ -19,6 +19,8 @@
   "experimentalFetchPolyfill": true,
   "experimentalSourceRewriting": true,
   "experimentalShadowDomSupport": true,
+  "experimentalNetworkStubbing": false,
+  "experimentalComponentTesting": false,
   "reporterOptions": {
     "configFile": "reporterOptions.json"
   },
