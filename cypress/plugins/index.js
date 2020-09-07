@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const timeStamp = require('date-fns');
-const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
+// const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 const percyHealthCheck = require("@percy/cypress/task");
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 
@@ -14,13 +14,13 @@ const getConfigurationByFile = (file) => {
 }
 
 module.exports = (on, config) => {
-  install(on, config);
+  // install(on, config);
 
   on("task", percyHealthCheck);
   on('task', { downloadFile })
 
   on('before:browser:launch', (browser = {}, launchOptions) => {
-    ensureBrowserFlags(browser, launchOptions);
+    // ensureBrowserFlags(browser, launchOptions);
     if (browser.name === 'chrome') {
       launchOptions.args.push('--start-fullscreen')
       launchOptions.args.push('--no-sandbox')
