@@ -6,6 +6,7 @@ WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
 COPY reporterOptions.json .
+COPY cypress.json .
 
 ENV CI=1
 RUN npm ci
