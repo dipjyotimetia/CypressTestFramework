@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  cypress:
+    image: cypress/browsers:node12.18.0-chrome83-ff77
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cypress
+    command: npx cypress run cy:ci
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress.json:/app/cypress.json
