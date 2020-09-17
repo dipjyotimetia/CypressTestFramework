@@ -18,7 +18,6 @@
   "pluginsFile": "cypress/plugins/index.js",
   "experimentalFetchPolyfill": true,
   "experimentalSourceRewriting": true,
-  "experimentalShadowDomSupport": true,
   "experimentalNetworkStubbing": false,
   "experimentalComponentTesting": false,
   "reporterOptions": {
