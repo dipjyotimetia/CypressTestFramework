@@ -54,7 +54,7 @@
     "cypress-ntlm-auth": "^2.3.0",
     "cypress-xpath": "^1.6.0",
     "@percy/cypress": "^2.3.1",
-    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-cypress": "^2.11.2",
     "fs-extra": "9.0.1",
     "knex": "0.21.5",
     "mocha": "8.1.3",
