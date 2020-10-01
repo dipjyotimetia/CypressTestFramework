@@ -59,7 +59,7 @@
     "knex": "0.21.5",
     "mocha": "8.1.3",
     "mochawesome": "6.1.1",
-    "mochawesome-merge": "4.1.0",
+    "mochawesome-merge": "4.2.0",
     "mochawesome-report-generator": "5.1.0",
     "start-server-and-test": "^1.11.3"
   }
