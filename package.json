@@ -29,7 +29,7 @@
     "axe-core": "^4.0.2",
     "chalk": "4.1.0",
     "cross-env": "7.0.2",
-    "cypress": "^5.3.0",
+    "cypress": "^5.6.0",
     "cypress-axe": "^0.9.1",
     "cypress-downloadfile": "^1.2.0",
     "date-fns": "^2.16.1",
