@@ -58,7 +58,7 @@
     "fs-extra": "9.0.1",
     "knex": "0.21.6",
     "mocha": "8.1.3",
-    "mochawesome": "6.1.1",
+    "mochawesome": "6.2.1",
     "mochawesome-merge": "4.2.0",
     "mochawesome-report-generator": "5.1.0",
     "start-server-and-test": "^1.11.4"
