@@ -18,7 +18,6 @@
   "pluginsFile": "cypress/plugins/index.js",
   "experimentalFetchPolyfill": true,
   "experimentalSourceRewriting": true,
-  "experimentalNetworkStubbing": false,
   "experimentalComponentTesting": false,
   "reporterOptions": {
     "configFile": "reporterOptions.json"

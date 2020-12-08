@@ -13,11 +13,8 @@ jobs:
       - name: npm install and build
         run: |
           npm install
-      - name: Visual Testing
-        uses: percy/exec-action@v0.3.0
+      - name: Cypress.io
+        uses: cypress-io/github-action@v2.6.1
         with:
           # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
-          command: "cypress run --spec 'cypress/integration/example_spec.js'"
-        env:
-          CI: true
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          spec: cypress/integration/example_spec.js
