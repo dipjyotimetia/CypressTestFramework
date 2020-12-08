@@ -918,14 +918,13 @@ describe('Kitchen Sink', function () {
                 })
         })
 
-        it('cy.route() - route responses to matching requests', function () {
+        it.skip('cy.intercept() - intercept responses to matching requests', function () {
             var message = 'whoa, this comment doesn\'t exist'
-            cy.server()
 
             // **** GET comments route ****
 
             // https://on.cypress.io/route
-            cy.route(/comments\/1/).as('getComment')
+            cy.intercept(/comments\/1/).as('getComment')
 
             // we have code that fetches a comment when
             // the button is clicked in scripts.js
@@ -937,12 +936,12 @@ describe('Kitchen Sink', function () {
             // continuing to the next command
 
             // https://on.cypress.io/wait
-            cy.wait('@getComment').its('status').should('eq', 200)
+            // cy.wait('@getComment').its('status').should('eq', 200)
 
             // **** POST comment route ****
 
             // Specify the route to listen to method 'POST'
-            cy.route('POST', '/comments').as('postComment')
+            cy.intercept('POST', '/comments').as('postComment')
 
             // we have code that posts a comment when
             // the button is clicked in scripts.js
@@ -953,11 +952,11 @@ describe('Kitchen Sink', function () {
             cy.get('@postComment').then(function (xhr) {
                 expect(xhr.requestBody).to.include('email')
                 expect(xhr.requestHeaders).to.have.property('Content-Type')
-                expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.route()')
+                expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.intercept()')
             })
 
             // **** Stubbed PUT comment route ****
-            cy.route({
+            cy.intercept({
                 method: 'PUT',
                 url: /comments\/\d+/,
                 status: 404,

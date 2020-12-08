@@ -2,7 +2,7 @@ version: '3'
 services:
 
   cypress:
-    image: cypress/browsers:node12.18.0-chrome83-ff77
+    image: cypress/browsers:node14.15.0-chrome86-ff82
     build:
       context: .
       dockerfile: Dockerfile
