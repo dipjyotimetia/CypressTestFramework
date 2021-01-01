@@ -46,7 +46,7 @@
     "@cypress/skip-test": "^2.5.1",
     "@neuralegion/cypress-har-generator": "^5.1.1",
     "@testing-library/cypress": "^7.0.2",
-    "cypress-react-unit-test": "4.17.1",
+    "cypress-react-unit-test": "4.17.2",
     "concurrently": "^5.3.0",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^4.1.1",
