@@ -17,7 +17,6 @@
   "supportFile": "cypress/support/index.js",
   "pluginsFile": "cypress/plugins/index.js",
   "experimentalFetchPolyfill": true,
-  "experimentalSourceRewriting": true,
   "experimentalComponentTesting": false,
   "reporterOptions": {
     "configFile": "reporterOptions.json"
