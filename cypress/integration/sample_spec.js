@@ -10,7 +10,7 @@ describe('Testing Web', function () {
         cy.mockTags();
     });
 
-    it('BetEasy Login', () => {
+    it('Web Login', () => {
         loginPage.navigateToUrl(BASE_URL);
         loginPage.login(USERNAME, PASSWORD);
         cy.wait(9000);

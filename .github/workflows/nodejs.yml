@@ -3,18 +3,18 @@ name: CypressCI
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     container:
       image: cypress/browsers:node14.15.0-chrome86-ff82
 
     steps:
       - uses: actions/checkout@v1
-      - name: npm install and build
+      - name: npm install and test
         run: |
           npm install
       - name: Cypress.io
-        uses: cypress-io/github-action@v2.6.1
+        uses: cypress-io/github-action@v2.7.0
         with:
           # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
           spec: cypress/integration/example_spec.js
