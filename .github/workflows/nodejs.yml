@@ -17,4 +17,4 @@ jobs:
         uses: cypress-io/github-action@v2.7.0
         with:
           # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
-          spec: cypress/integration/example_spec.js
+          spec: cypress/integration/example_spec.ts

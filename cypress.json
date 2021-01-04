@@ -14,8 +14,8 @@
   "watchForFileChanges": false,
   "videosFolder": "cypress/videos",
   "trashAssetsBeforeRuns": true,
-  "supportFile": "cypress/support/index.js",
-  "pluginsFile": "cypress/plugins/index.js",
+  "supportFile": "cypress/support/index.ts",
+  "pluginsFile": "cypress/plugins/index.ts",
   "experimentalFetchPolyfill": true,
   "experimentalComponentTesting": false,
   "reporterOptions": {

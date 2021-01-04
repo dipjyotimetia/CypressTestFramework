@@ -2,6 +2,8 @@
   "name": "cypress_test_framework",
   "private": true,
   "description": "Cypress test Framework",
+  "author": "Dipjyoti Metia",
+  "license": "MIT",
   "scripts": {
     "clean": "rimraf cypress/reports",
     "lint": "tslint ./src/**/*.js -t verbose",
@@ -10,11 +12,11 @@
     "cypress:open": "cypress open",
     "start:ci": "my-server -p 3030",
     "cy:verify": "cypress verify",
-    "cy:run": "cypress run --headed --spec 'cypress/integration/example_spec.js'",
-    "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/example_spec.js'",
-    "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/example_spec.js'",
-    "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/example_spec.js'",
-    "cy:ci": "cypress run --spec 'cypress/integration/example_spec.js'",
+    "cy:run": "cypress run --headed --spec 'cypress/integration/example_spec.ts'",
+    "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/example_spec.ts'",
+    "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/example_spec.ts'",
+    "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/example_spec.ts'",
+    "cy:ci": "cypress run --spec 'cypress/integration/example_spec.ts'",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
   },
   "keywords": [
@@ -23,8 +25,6 @@
     "test",
     "typescript"
   ],
-  "author": "Dipjyoti Metia",
-  "license": "MIT",
   "dependencies": {
     "axe-core": "^4.1.1",
     "chalk": "4.1.0",

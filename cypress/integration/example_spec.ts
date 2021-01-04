@@ -686,6 +686,7 @@ describe('Kitchen Sink', function () {
 
                         // jquery map returns jquery object
                         // and .get() convert this to simple array
+                        //@ts-ignore
                         texts = texts.get()
 
                         // array should have length of 3
@@ -892,6 +893,7 @@ describe('Kitchen Sink', function () {
                 // forces requests that don't match your routes to 404
                 expect(server.force404).to.be.false
                 // whitelists requests from ever being logged or stubbed
+                //@ts-ignore
                 expect(server.whitelist).to.be.a('function')
             })
 
@@ -949,7 +951,7 @@ describe('Kitchen Sink', function () {
             cy.wait('@postComment')
 
             // get the route
-            cy.get('@postComment').then(function (xhr) {
+            cy.get('@postComment').then(function (xhr:any) {
                 expect(xhr.requestBody).to.include('email')
                 expect(xhr.requestHeaders).to.have.property('Content-Type')
                 expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.intercept()')
@@ -959,6 +961,7 @@ describe('Kitchen Sink', function () {
             cy.intercept({
                 method: 'PUT',
                 url: /comments\/\d+/,
+                //@ts-ignore
                 status: 404,
                 response: { error: message },
                 delay: 500
@@ -1215,7 +1218,8 @@ describe('Kitchen Sink', function () {
             }
 
             let stub = cy.stub(obj, 'foo').as('foo')
-
+            
+            //@ts-ignore
             obj.foo('foo', 'bar')
 
             expect(stub).to.be.called
@@ -1279,6 +1283,7 @@ describe('Kitchen Sink', function () {
         it('Cypress.moment() - format or parse dates using a moment method', function () {
             // use moment's format function
             // https://on.cypress.io/cypress-moment
+            //@ts-ignore
             var time = Cypress.moment().utc('2014-04-25T19:38:53.196Z').format('h:mm A')
 
             cy.get('.utility-moment').contains('3:38 PM')
