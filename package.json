@@ -52,7 +52,7 @@
     "cypress-multi-reporters": "1.4.0",
     "cypress-ntlm-auth": "^3.1.5",
     "cypress-xpath": "^1.6.1",
-    "@percy/cypress": "^2.3.3",
+    "@percy/cypress": "^2.3.4",
     "eslint-plugin-cypress": "^2.11.2",
     "fs-extra": "9.1.0",
     "knex": "0.21.16",
