@@ -48,7 +48,7 @@
     "cypress-react-unit-test": "4.17.2",
     "concurrently": "^5.3.0",
     "cypress-dark": "^1.7.14",
-    "cypress-file-upload": "^5.0.1",
+    "cypress-file-upload": "^5.0.2",
     "cypress-multi-reporters": "1.4.0",
     "cypress-ntlm-auth": "^3.1.5",
     "cypress-xpath": "^1.6.1",
