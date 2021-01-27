@@ -33,7 +33,7 @@
     "cypress-axe": "^0.12.0",
     "cypress-downloadfile": "^1.2.0",
     "date-fns": "^2.16.1",
-    "faker": "5.1.0",
+    "faker": "5.2.0",
     "lodash": "^4.17.20",
     "rimraf": "3.0.2",
     "uuid": "8.3.2"
