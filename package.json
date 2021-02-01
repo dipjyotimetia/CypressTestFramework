@@ -55,7 +55,7 @@
     "@percy/cypress": "^2.3.4",
     "eslint-plugin-cypress": "^2.11.2",
     "fs-extra": "9.1.0",
-    "knex": "0.21.16",
+    "knex": "0.21.17",
     "mocha": "8.2.1",
     "mochawesome": "6.2.1",
     "mochawesome-merge": "4.2.0",
