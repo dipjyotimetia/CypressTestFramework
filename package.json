@@ -39,7 +39,7 @@
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@types/chai": "4.2.14",
+    "@types/chai": "4.2.15",
     "@types/jquery": "3.5.5",
     "@types/mocha": "8.2.0",
     "@cypress/skip-test": "^2.6.0",
