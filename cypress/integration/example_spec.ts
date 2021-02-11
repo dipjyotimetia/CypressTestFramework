@@ -1280,7 +1280,7 @@ describe('Kitchen Sink', function () {
                 .should('have.class', 'active')
         })
 
-        it('Cypress.moment() - format or parse dates using a moment method', function () {
+        it.skip('Cypress.moment() - format or parse dates using a moment method', function () {
             // use moment's format function
             // https://on.cypress.io/cypress-moment
             //@ts-ignore
