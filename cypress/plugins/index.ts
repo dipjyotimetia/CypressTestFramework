@@ -1,10 +1,10 @@
-const fs = require('fs-extra');
-const path = require('path');
-const chalk = require('chalk');
-const timeStamp = require('date-fns');
+import fs = require('fs-extra');
+import path = require('path');
+import chalk = require('chalk');
+import timeStamp = require('date-fns');
 // const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
-const percyHealthCheck = require("@percy/cypress/task");
-const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+import percyHealthCheck = require("@percy/cypress/task");
+import { downloadFile } from 'cypress-downloadfile/lib/addPlugin';
 
 let logTime = timeStamp.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
@@ -19,7 +19,7 @@ module.exports = (on, config) => {
   on("task", percyHealthCheck);
   on('task', { downloadFile })
 
-  on('before:browser:launch', (browser = {}, launchOptions) => {
+  on('before:browser:launch', (browser = {}, launchOptions: { args: { push: (arg0: string) => void; fullscreen: boolean; }; }) => {
     // ensureBrowserFlags(browser, launchOptions);
     if (browser.name === 'chrome') {
       launchOptions.args.push('--start-fullscreen')
@@ -36,21 +36,21 @@ module.exports = (on, config) => {
   });
 
   on('task', {
-    info(message) {
+    info(message: any) {
       console.log(chalk.yellow(`    INFO - ${logTime}; ${message}`))
       return null
     }
   });
 
   on('task', {
-    fail(message) {
+    fail(message: any) {
       console.log(chalk.bgRed(`    ERROR - ${logTime}; ${message}`))
       return null
     }
   });
 
   on('task', {
-    updateFixture(filePath) {
+    updateFixture(filePath: any) {
       const rawData = fs.readFileSync(filePath, 'utf8');
       const context = JSON.parse(rawData);
       context.FreeBetBoost.Items.find(e => e.BoostType === 'Multi').forEach(e1 => {

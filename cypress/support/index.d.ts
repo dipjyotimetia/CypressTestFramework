@@ -13,7 +13,55 @@ declare namespace Cypress {
          * @example cy.mockGlobalFeeds()
          */
         mockGlobalFeeds(): Chainable<any>;
-        
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.queryByLabelText()
+         */
+        queryByLabelText(label: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.findByLabelText()
+         */
+        findByLabelText(label: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.queryByPlaceholderText()
+         */
+        queryByPlaceholderText(placeHolderText: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.findByDisplayValue()
+         */
+        findByDisplayValue(displayValue: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.queryByDisplayValue()
+         */
+        queryByDisplayValue(displayValue: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.findByText()
+         */
+        findByText(text: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.queryByText()
+         */
+        queryByText(text: string): Chainable<any>;
+
+        /**
+         * Custom command to mock global feeds
+         * @example cy.findByPlaceholderText()
+         */
+        findByPlaceholderText(text: string): Chainable<any>;
+
         /**
          * Custom command to mock tags
          * @example cy.mockTags()

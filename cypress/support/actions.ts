@@ -4,7 +4,7 @@
  * navigate to url
  * @param {url} url
  */
-export const navigate = (url) => {
+export const navigate = (url: string) => {
     cy.visit(url, {
         retryOnNetworkFailure: true,
         timeout: 30000
@@ -15,7 +15,7 @@ export const navigate = (url) => {
  * LogInfo
  * @param {String} value 
  */
-export const logInfo = (value) => {
+export const logInfo = (value: any) => {
     cy.task('info', value);
 }
 
@@ -23,7 +23,7 @@ export const logInfo = (value) => {
  * LogFail
  * @param {String} value 
  */
-export const logFail = (value) => {
+export const logFail = (value: any) => {
     cy.task('fail', value);
 }
 
@@ -31,7 +31,7 @@ export const logFail = (value) => {
  * Click
  * @param {Element} element
  */
-export const click = (element) => {
+export const click = (element: string) => {
     cy.get(element).click();
 }
 
@@ -39,7 +39,7 @@ export const click = (element) => {
  * Click By xpath
  * @param {Element} element 
  */
-export const clickXpath = (element) => {
+export const clickXpath = (element: string) => {
     cy.xpath(element).click();
 }
 
@@ -47,7 +47,7 @@ export const clickXpath = (element) => {
  * Submit
  * @param {Element} element 
  */
-export const submit = (element) => {
+export const submit = (element: any) => {
     cy.get(element).submit();
 }
 
@@ -56,7 +56,7 @@ export const submit = (element) => {
  * @param {Element} element
  * @param {Position} position
  */
-export const clickByPosition = (element, position) => {
+export const clickByPosition = (element: any, position: Partial<Cypress.ClickOptions>) => {
     cy.get(element).click(position);
 }
 
@@ -66,7 +66,7 @@ export const clickByPosition = (element, position) => {
  * @param {X axis} x
  * @param {Y axis} y
  */
-export const clickByCoordinates = (element, x, y) => {
+export const clickByCoordinates = (element: any, x: any, y: Partial<Cypress.ClickOptions>) => {
     cy.get(element).click(x, y);
 }
 
@@ -74,7 +74,7 @@ export const clickByCoordinates = (element, x, y) => {
  * Click all elements
  * @param {Element} element
  */
-export const clickAllElements = (element) => {
+export const clickAllElements = (element: any) => {
     cy.get(element).click({ multiple: true});
 }
 
@@ -82,7 +82,7 @@ export const clickAllElements = (element) => {
  * Wait
  * @param {time} time
  */
-export const wait = (time) => {
+export const wait = (time: string) => {
     cy.wait(time);
 }
 
@@ -90,7 +90,7 @@ export const wait = (time) => {
  * Check
  * @param {Element} element
  */
-export const check = (element) => {
+export const check = (element: any) => {
     cy.get(element).check();
 }
 
@@ -98,7 +98,7 @@ export const check = (element) => {
  * Check first one
  * @param {Element} element
  */
-export const checkFirst = (element) => {
+export const checkFirst = (element: any) => {
     cy.get(element).first().check();
 }
 
@@ -107,7 +107,7 @@ export const checkFirst = (element) => {
  * @param {Element} element
  * @param {value} value
  */
-export const checkValue = (element, value) => {
+export const checkValue = (element: any, value: Partial<Cypress.CheckOptions>) => {
     cy.get(element).check(value);
 }
 
@@ -116,7 +116,7 @@ export const checkValue = (element, value) => {
  * @param {Element} element
  * @param  {...any} value
  */
-export const checkValues = (element, ...value) => {
+export const checkValues = (element: any, ...value: any[]) => {
     cy.get(element).check(value);
 }
 
@@ -125,7 +125,7 @@ export const checkValues = (element, ...value) => {
  * @param {Element} element
  * @param {Value} value
  */
-export const enter = (element, value) => {
+export const enter = (element: string, value: string) => {
     cy.get(element).type(value);
 }
 
@@ -134,7 +134,7 @@ export const enter = (element, value) => {
  * @param {Element} element 
  * @param {Value} value 
  */
-export const enterXpath = (element, value) => {
+export const enterXpath = (element: string, value: string) => {
     cy.xpath(element).type(value);
 }
 
@@ -143,7 +143,7 @@ export const enterXpath = (element, value) => {
  * @param {Element} element
  * @param {Value} value
  */
-export const selectDropdown = (element, value) => {
+export const selectDropdown = (element: any, value: string | string[]) => {
     cy.get(element).select(value);
 }
 
@@ -151,7 +151,7 @@ export const selectDropdown = (element, value) => {
  * Is Enabled and visible
  * @param {Element} element
  */
-export const isEnabledAndVisible = (element) => {
+export const isEnabledAndVisible = (element: any) => {
     cy.get(element).should('exist').and('be.visible').and('be.enabled');
 }
 
@@ -160,7 +160,7 @@ export const isEnabledAndVisible = (element) => {
  * @param {Element} element
  * @param {Contain Value} value
  */
-export const verifyTextContent = (element, value) => {
+export const verifyTextContent = (element: any, value: any) => {
     cy.get(element).should('have.text', value);
 }
 
@@ -168,7 +168,7 @@ export const verifyTextContent = (element, value) => {
  * IsVisible
  * @param {Element} element
  */
-export const isVisible = (element) => {
+export const isVisible = (element: any) => {
     cy.get(element).should('be.visible');
 }
 
@@ -176,7 +176,7 @@ export const isVisible = (element) => {
  * Is Not Visible
  * @param {Element} element
  */
-export const isNotVisible = (element) => {
+export const isNotVisible = (element: any) => {
     cy.get(element).should('not.be.visible');
 }
 
@@ -184,7 +184,7 @@ export const isNotVisible = (element) => {
  * Is Enable
  * @param {Element} element
  */
-export const isEnable = (element) => {
+export const isEnable = (element: any) => {
     cy.get(element).should('be.enabled');
 }
 
@@ -192,7 +192,7 @@ export const isEnable = (element) => {
  * Is Not Enable
  * @param {Element} element
  */
-export const isNotEnable = (element) => {
+export const isNotEnable = (element: any) => {
     cy.get(element).should('not.be.enabled');
 }
 
@@ -200,7 +200,7 @@ export const isNotEnable = (element) => {
  * Is Checked
  * @param {Element} element
  */
-export const isChecked = (element) => {
+export const isChecked = (element: any) => {
     cy.get(element).should('be.checked');
 }
 
@@ -208,7 +208,7 @@ export const isChecked = (element) => {
  * Is Disabled
  * @param {Element} element
  */
-export const isDisabled = (element) => {
+export const isDisabled = (element: any) => {
     cy.get(element).should('be.disabled');
 }
 
@@ -216,7 +216,7 @@ export const isDisabled = (element) => {
  * Is Selected
  * @param {Element} element
  */
-export const isSelected = (element) => {
+export const isSelected = (element: any) => {
     cy.get(element).should('be.selected');
 }
 
@@ -224,7 +224,7 @@ export const isSelected = (element) => {
  * Is Not Selected
  * @param {Element} element
  */
-export const isNotSelected = (element) => {
+export const isNotSelected = (element: any) => {
     cy.get(element).should('not.be.selected');
 }
 
@@ -232,7 +232,7 @@ export const isNotSelected = (element) => {
  * Scroll to bottom
  * @param {Element} element
  */
-export const scrollToBottom = (element) => {
+export const scrollToBottom = (element: any) => {
     cy.get(element).scrollTo('bottom');
 }
 
@@ -240,7 +240,7 @@ export const scrollToBottom = (element) => {
  * Scroll to center
  * @param {Element} element
  */
-export const scrollToCenter = (element) => {
+export const scrollToCenter = (element: any) => {
     cy.get(element).scrollTo('center');
 }
 
@@ -248,7 +248,7 @@ export const scrollToCenter = (element) => {
  * Scroll to right
  * @param {Element} element
  */
-export const scrollToRight = (element) => {
+export const scrollToRight = (element: any) => {
     cy.get(element).scrollTo('right');
 }
 
@@ -256,7 +256,7 @@ export const scrollToRight = (element) => {
  * Scroll into view
  * @param {Element} element
  */
-export const scrollToView = (element) => {
+export const scrollToView = (element: any) => {
     cy.get(element).scrollIntoView();
 }
 
@@ -264,7 +264,7 @@ export const scrollToView = (element) => {
  * Capture Screen
  * @param {ScreenName} screenName
  */
-export const captureScreen = (screenName) => {
+export const captureScreen = (screenName: Partial<Cypress.Loggable & Cypress.Timeoutable & Cypress.ScreenshotOptions>) => {
     cy.screenshot(screenName);
 }
 
@@ -273,7 +273,7 @@ export const captureScreen = (screenName) => {
  * @param {Cookie Name} name
  * @param {Value} value
  */
-export const setCookie = (name, value, url) => {
+export const setCookie = (name: string, value: string, url: any) => {
     cy.setCookie(name, value, { domain: url });
 }
 
@@ -288,7 +288,7 @@ export const clearCookies = () => {
  * Clear Cookie
  * @param {Cookie} cokkie
  */
-export const clearCookie = (cokkie) => {
+export const clearCookie = (cokkie: string) => {
     cy.clearCookie(cokkie);
 }
 
@@ -303,7 +303,7 @@ export const clearLocalStorage = () => {
  * Clear local storage key
  * @param {Key} key
  */
-export const clearLocalStorageKey = (key) => {
+export const clearLocalStorageKey = (key: string) => {
     cy.clearLocalStorage(key);
 }
 
@@ -311,7 +311,7 @@ export const clearLocalStorageKey = (key) => {
  * Execute Script
  * @param {script} script
  */
-export const execute = (script) => {
+export const execute = (script: string) => {
     cy.exec(script, { timeout: 30000 });
 }
 
@@ -319,7 +319,7 @@ export const execute = (script) => {
  * GetApi Request
  * @param {url endpoint} url
  */
-export const getApiRequest = (url) => {
+export const getApiRequest = (url: string | object) => {
     return cy.route('GET', url).its('body');
 }
 
@@ -328,7 +328,7 @@ export const getApiRequest = (url) => {
  * @param {url endpoint} url
  * @param {payload} body
  */
-export const postApiRequest = (url, body) => {
+export const postApiRequest = (url: string | RegExp, body: string | object) => {
     return cy.route('POST', url, body).its('body');
 }
 
@@ -337,7 +337,7 @@ export const postApiRequest = (url, body) => {
  * @param {labelText} labelText
  * @param {Value} value
  */
-export const queryByLabelText = (labelText, value) => {
+export const queryByLabelText = (labelText: string, value: string) => {
     cy.queryByLabelText(labelText).click().type(value);
 }
 
@@ -346,7 +346,7 @@ export const queryByLabelText = (labelText, value) => {
  * @param {Label Text} labelText
  * @param {value} value
  */
-export const findByLabelText = (labelText, value) => {
+export const findByLabelText = (labelText: any, value: any) => {
     cy.findByLabelText(labelText).click().type(value);
 }
 
@@ -355,7 +355,7 @@ export const findByLabelText = (labelText, value) => {
  * @param {PlaceHolder Text} placeHolderText
  * @param {Value} value
  */
-export const queryByPlaceholderText = (placeHolderText, value) => {
+export const queryByPlaceholderText = (placeHolderText: any, value: any) => {
     cy.queryByPlaceholderText(placeHolderText).click().type(value);
 }
 
@@ -364,7 +364,7 @@ export const queryByPlaceholderText = (placeHolderText, value) => {
  * @param {Text} text
  * @param {Value} value
  */
-export const findByPlaceholderText = (text, value) => {
+export const findByPlaceholderText = (text: any, value: any) => {
     cy.findByPlaceholderText(text).click().type(value);
 }
 
@@ -373,7 +373,7 @@ export const findByPlaceholderText = (text, value) => {
  * @param {Text} text
  * @param {Value} value
  */
-export const queryByText = (text, value) => {
+export const queryByText = (text: any, value: any) => {
     cy.queryByText(text).click().type(value);
 }
 
@@ -382,7 +382,7 @@ export const queryByText = (text, value) => {
  * @param {Text} text
  * @param {Value} value
  */
-export const findByText = (text, value) => {
+export const findByText = (text: any, value: any) => {
     cy.findByText(text).click().type(value);
 }
 
@@ -391,7 +391,7 @@ export const findByText = (text, value) => {
  * @param {Display Value} displayValue
  * @param {Value} value
  */
-export const queryByDisplayValue = (displayValue, value) => {
+export const queryByDisplayValue = (displayValue: any, value: any) => {
     cy.queryByDisplayValue(displayValue)
         .click()
         .clear()
@@ -403,7 +403,7 @@ export const queryByDisplayValue = (displayValue, value) => {
  * @param {Display Value} displayValue
  * @param {Value} value
  */
-export const findByDisplayValue = (displayValue, value) => {
+export const findByDisplayValue = (displayValue: any, value: any) => {
     cy.findByDisplayValue(displayValue)
         .click()
         .clear()
