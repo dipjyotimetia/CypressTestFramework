@@ -55,7 +55,7 @@
     "cypress-xpath": "^1.6.2",
     "eslint-plugin-cypress": "^2.11.2",
     "fs-extra": "9.1.0",
-    "knex": "0.95.2",
+    "knex": "0.95.4",
     "mocha": "8.3.2",
     "cypress-parallel": "0.1.9",
     "mochawesome": "6.2.2",
