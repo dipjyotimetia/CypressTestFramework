@@ -42,7 +42,7 @@
     "@cypress/skip-test": "^2.6.0",
     "@neuralegion/cypress-har-generator": "^5.1.1",
     "@percy/cypress": "^2.3.4",
-    "@testing-library/cypress": "^7.0.4",
+    "@testing-library/cypress": "^7.0.5",
     "@types/chai": "4.2.15",
     "@types/jquery": "3.5.5",
     "@types/mocha": "8.2.1",
