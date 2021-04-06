@@ -48,7 +48,7 @@
     "@types/jquery": "^3.5.5",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.37",
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.0.1",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^5.0.3",
     "cypress-multi-reporters": "^1.4.0",
