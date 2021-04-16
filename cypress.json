@@ -17,7 +17,6 @@
   "supportFile": "cypress/support/index.ts",
   "pluginsFile": "cypress/plugins/index.ts",
   "experimentalFetchPolyfill": true,
-  "experimentalComponentTesting": false,
   "reporterOptions": {
     "configFile": "reporterOptions.json"
   },
