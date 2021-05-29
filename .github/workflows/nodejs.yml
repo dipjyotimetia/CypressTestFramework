@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: npm install and test
         run: |
+          npm install -g browserstack-cypress-cli
           npm install
       - name: Cypress & Percy visual test
         # uses: cypress-io/github-action@v2.9.12
@@ -21,6 +22,8 @@ jobs:
         uses: percy/exec-action@v0.3.1
         with:
           custom-command: "npm test"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}  
       - name: Run in BrowserStack    
         run: |
           BUILD_ID=$(browserstack-cypress run --sync --username $BROWSERSTACK_USER --key $BROWSERSTACK_PASS | grep 'build id:' | rev | cut -d" " -f1 | rev)
@@ -44,6 +47,5 @@ jobs:
             $(sleep $POLLING_INTERVAL)
           done
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER }}
           BROWSERSTACK_PASS: ${{ secrets.BROWSERSTACK_PASS }}
