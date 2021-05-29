@@ -14,7 +14,12 @@ jobs:
         run: |
           npm install
       - name: Cypress.io
-        uses: cypress-io/github-action@v2.9.12
+        # uses: cypress-io/github-action@v2.9.12
+        # with:
+        #   # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
+        #   spec: cypress/integration/example_spec.ts
+        uses: percy/exec-action@v0.3.1
         with:
-          # command: "cypress run --spec 'cypress/integration/example_spec.js' --record --key=${{ secrets.CYPRESS_TOKEN }}"
-          spec: cypress/integration/example_spec.ts
+          custom-command: "npm test"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}  
