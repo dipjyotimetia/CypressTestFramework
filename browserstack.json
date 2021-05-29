@@ -21,7 +21,7 @@
     ],
     "run_settings": {
         "cypress_config_file": "./cypress.json",
-        "cypress_version": "7",
+        "cypress_version": "6",
         "project_name": "CypressTestFramework",
         "build_name": "Build no. 1",
         "parallels": "2"
