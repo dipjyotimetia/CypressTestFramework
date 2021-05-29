@@ -8,57 +8,23 @@
             "browser": "chrome",
             "os": "Windows 10",
             "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         },
         {
             "browser": "firefox",
             "os": "Windows 10",
             "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "Windows 10",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "chrome",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "firefox",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         }
     ],
     "run_settings": {
         "cypress_config_file": "./cypress.json",
-        "cypress_version": "6",
+        "cypress_version": "7",
         "project_name": "CypressTestFramework",
         "build_name": "Build no. 1",
-        "parallels": "5"
+        "parallels": "2"
     },
     "disable_usage_reporting": false
 }
