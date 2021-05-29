@@ -1,4 +1,5 @@
 [![Build Status](https://github.com/dipjyotimetia/CypressTest/workflows/CypressCI/badge.svg)](https://github.com/dipjyotimetia/CypressTest/actions)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/d463521f/CypressTestFramework)
 
 ## Cypress WebUi Automation
 
@@ -6,7 +7,7 @@
 
 #### Installation:
 
-- Install _nodejs 12.4.1 lts_ [Link](https://nodejs.org/en/download/)
+- Install _nodejs 14.17.0 lts_ [Link](https://nodejs.org/en/download/)
 - Install Vscode [link](https://code.visualstudio.com/download)
 
 #### Project Setup:
