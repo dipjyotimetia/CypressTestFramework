@@ -16,7 +16,7 @@
     "firefox:run": "cypress run --headed --browser firefox --spec 'cypress/integration/example_spec.ts'",
     "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/example_spec.ts'",
     "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/example_spec.ts'",
-    "test": "cypress run --spec 'cypress/integration/example_spec.ts'",
+    "test": "percy exec -- cypress run --spec 'cypress/integration/example_spec.ts'",
     "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
   },
   "keywords": [
