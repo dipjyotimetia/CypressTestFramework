@@ -1,7 +1,11 @@
 {
-    "include": [
-      "./node_modules/cypress",
-      "cypress/**/*.js",
-      "cypress/**/*.ts"
-    ]
+  "types": [
+    "cypress",
+    "@percy/cypress"
+  ],
+  "include": [
+    "./node_modules/cypress",
+    "cypress/**/*.js",
+    "cypress/**/*.ts"
+  ]
 }

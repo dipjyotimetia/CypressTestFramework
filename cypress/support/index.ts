@@ -3,6 +3,7 @@ import './commands';
 import 'cypress-ntlm-auth/dist/commands';
 import 'cypress-axe'
 import '@cypress/skip-test/support'
+import '@percy/cypress';
 // import '@neuralegion/cypress-har-generator/dist/commands'
 // import 'cypress-react-unit-test/support'
 import addContext from 'mochawesome/addContext'
