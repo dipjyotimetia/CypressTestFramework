@@ -1,16 +1,54 @@
-version: '3'
-services:
+version: '3.6'
 
-  cypress:
-    image: cypress/browsers:node14.16.0-chrome90-ff88
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: cypress
-    command: npx cypress run cy:ci
+services:
+  mongo:
+    image: mongo:4.2
+    command: mongod --port 27018
     volumes:
-      - ./cypress:/app/cypress
-      - ./cypress.json:/app/cypress.json
-    privileged: true
-    ipc: host
-    shm_size: 1024M  
+      - ./data/data-mongo-cypress:/data/db
+    ports:
+    - "27018:27018"
+
+  redis:
+    image: redis:alpine
+
+  director:
+    image: agoldis/sorry-cypress-director:latest
+    environment:
+      DASHBOARD_URL: http://localhost:8081
+      MONGODB_URI: 'mongodb://mongo:27018'
+      MONGODB_DATABASE: 'sorry-cypress'
+      EXECUTION_DRIVER: '../execution/mongo/driver'
+      SCREENSHOTS_DRIVER: '../screenshots/s3.driver'
+      AWS_ACCESS_KEY_ID: 'key'
+      AWS_SECRET_ACCESS_KEY: 'secret'
+      S3_BUCKET: sorry-cypress
+      REDIS_URI: 'redis://redis:6379'
+    ports:
+      - 1234:1234
+    depends_on:
+      - mongo
+      - redis
+
+  api:
+    image: agoldis/sorry-cypress-api:latest
+    environment:
+      MONGODB_URI: 'mongodb://mongo:27018'
+      MONGODB_DATABASE: 'sorry-cypress'
+    ports:
+      - 4000:4000
+    depends_on:
+      - mongo
+
+  dashboard:
+    image: agoldis/sorry-cypress-dashboard:latest
+    environment:
+      GRAPHQL_SCHEMA_URL: http://localhost:4000
+      GRAPHQL_CLIENT_CREDENTIALS: ''
+      CI_URL: ''
+      PORT: 8081
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+      - api
