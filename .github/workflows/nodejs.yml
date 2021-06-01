@@ -10,12 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x' 
       - name: Install dependencies
         run: |
-          npm install -g cy2
           npm install
       - name: Checkout Dev Repo
       - uses: actions/checkout@v2
@@ -25,9 +21,6 @@ jobs:
 
       - name: Setup Application under test
         run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
-
-      - name: Setup Sorry Cypress Environment
-        run: docker-compose up -d
 
       - name: Cypress & Percy visual test
         # uses: cypress-io/github-action@v2.9.12
