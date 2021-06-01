@@ -17,17 +17,13 @@ jobs:
         run: |
           npm install -g cy2
           npm install
-      - name: Checkout tools repo
+      - name: Checkout Dev Repo
       - uses: actions/checkout@v2
         with:
           repository: dipjyotimetia/ExpenseWeb
           path: ExpenseWeb
 
-      - name: Install dependencies
-        run: |
-          npm install -g cy2
-          npm install
-      - name: Setup Aplication under test
+      - name: Setup Application under test
         run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
 
       - name: Setup Sorry Cypress Environment
