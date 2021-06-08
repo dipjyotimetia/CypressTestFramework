@@ -2,6 +2,8 @@ import 'cypress-file-upload';
 import '@testing-library/cypress/add-commands'
 import '@percy/cypress'
 import 'cypress-downloadfile/lib/downloadFileCommand'
+import "cypress-audit/commands";
+import '@testing-library/cypress/add-commands'
 
 Cypress.Commands.add("login", (...states) => {
     cy.request({

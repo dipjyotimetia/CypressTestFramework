@@ -26,14 +26,14 @@
     "typescript"
   ],
   "dependencies": {
-    "axe-core": "^4.2.1",
+    "axe-core": "^4.2.2",
     "chalk": "^4.1.1",
     "cross-env": "^7.0.3",
     "cy2": "^1.2.1",
-    "cypress": "^7.4.0",
+    "cypress": "^7.5.0",
     "cypress-axe": "^0.12.2",
     "cypress-downloadfile": "^1.2.0",
-    "date-fns": "^2.21.3",
+    "date-fns": "^2.22.1",
     "faker": "^5.5.3",
     "lodash": "^4.17.21",
     "rimraf": "^3.0.2",
@@ -49,8 +49,9 @@
     "@types/fs-extra": "^9.0.11",
     "@types/jquery": "^3.5.5",
     "@types/mocha": "^8.2.2",
-    "@types/node": "^15.6.1",
+    "@types/node": "^15.12.2",
     "concurrently": "^6.2.0",
+    "cypress-audit": "^1.0.0",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^5.0.7",
     "cypress-multi-reporters": "^1.5.0",
@@ -60,11 +61,12 @@
     "eslint-plugin-cypress": "^2.11.3",
     "fs-extra": "^10.0.0",
     "knex": "^0.95.6",
-    "mocha": "^8.4.0",
+    "lighthouse": "^8.0.0",
+    "mocha": "^9.0.0",
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
-    "start-server-and-test": "^1.12.3",
+    "start-server-and-test": "^1.12.5",
     "typescript": "^4.3.2"
   }
 }

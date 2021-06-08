@@ -7,7 +7,7 @@
             "dom"
         ],
         "types": [
-            "cypress","@percy/cypress"
+            "cypress","@percy/cypress","@testing-library/cypress"
         ]
     },
     "include": [

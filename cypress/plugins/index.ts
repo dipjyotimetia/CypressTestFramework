@@ -2,12 +2,14 @@ import fs = require('fs-extra');
 import path = require('path');
 import chalk = require('chalk');
 import timeStamp = require('date-fns');
+const { lighthouse, prepareAudit } = require("cypress-audit");
+const ReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
 // const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 import { downloadFile } from 'cypress-downloadfile/lib/addPlugin';
 
 let logTime = timeStamp.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
-const getConfigurationByFile = (file) => {
+const getConfigurationByFile = (file: any) => {
   const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`)
   return fs.readJson(pathToConfigFile)
 }
@@ -19,6 +21,7 @@ module.exports = (on, config) => {
 
   on('before:browser:launch', (browser = {}, launchOptions: { args: { push: (arg0: string) => void; fullscreen: boolean; }; }) => {
     // ensureBrowserFlags(browser, launchOptions);
+    prepareAudit(launchOptions);
     if (browser.name === 'chrome') {
       launchOptions.args.push('--start-fullscreen')
       launchOptions.args.push('--no-sandbox')
@@ -45,6 +48,16 @@ module.exports = (on, config) => {
       console.log(chalk.bgRed(`    ERROR - ${logTime}; ${message}`))
       return null
     }
+  });
+
+  on("task", {
+    lighthouse: lighthouse((lighthouseReport) => {
+      const dirPath = './cypress/perfReport'
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath)
+      }
+      fs.writeFileSync(`${dirPath}/lhreport.html`, ReportGenerator.generateReport(lighthouseReport.lhr, 'html'));
+    }),
   });
 
   on('task', {
