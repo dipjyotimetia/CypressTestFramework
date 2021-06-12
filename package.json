@@ -17,7 +17,8 @@
     "chrome:run": "cypress run --headed --browser chrome --spec 'cypress/integration/example_spec.ts'",
     "edge:run": "cypress run --headed --browser edge --spec 'cypress/integration/example_spec.ts'",
     "test": "percy exec -- cypress run --spec 'cypress/integration/example_spec.ts'",
-    "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
+    "test:ci": "start-server-and-test start:ci http://localhost:3030 cy:run",
+    "test:cypress": "cross-env CYPRESS_API_URL=http://localhost:1234 cy2 run --record --key vfepbj --parallel --ci-build-id cypress-test"
   },
   "keywords": [
     "node",
@@ -40,8 +41,8 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@cypress/skip-test": "^2.6.0",
-    "@neuralegion/cypress-har-generator": "^5.2.2",
+    "@cypress/skip-test": "^2.6.1",
+    "@neuralegion/cypress-har-generator": "^5.2.3",
     "@percy/cli": "1.0.0-beta.52",
     "@percy/cypress": "^3.1.0",
     "@testing-library/cypress": "^7.0.6",
@@ -51,6 +52,7 @@
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.12.2",
     "concurrently": "^6.2.0",
+    "cross-env": "7.0.3",
     "cypress-audit": "^1.0.0",
     "cypress-dark": "^1.7.14",
     "cypress-file-upload": "^5.0.7",

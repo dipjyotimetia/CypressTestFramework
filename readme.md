@@ -1,9 +1,16 @@
 [![Build Status](https://github.com/dipjyotimetia/CypressTest/workflows/CypressCI/badge.svg)](https://github.com/dipjyotimetia/CypressTest/actions)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/d463521f/CypressTestFramework)
 
-## Cypress WebUi Automation
+## Cypress Test Framework
 
-<img src="https://cloud.githubusercontent.com/assets/1268976/20607953/d7ae489c-b24a-11e6-9cc4-91c6c74c5e88.png">
+![image](./doc/CypressTestFramework.png)
+
+### Sorry Cypress Dashboard
+![image](./doc/SorryCypressDashboard.png)
+![image](./doc/SorryCyResult.png)
+
+### Cypress Test Result
+![image](./doc/CyResult.png)
 
 #### Installation:
 
@@ -30,8 +37,12 @@
 - Test environment json files names are case sensitive
 - To run test on specific environment update `configFile=uat or configFile=prod`
 
+#### Setup SorryCypress Dashboard:
+- `docker-compose up -d`
+
 #### Test:
 
+- `test:cypress` run tests in sorry cypress dashboard
 - `npm run cy:chrome` run tests in chrome browser
 - `npm run cypress:open` for test development and run(_Test Watcher is set to false_)
 - `npm run cy:test` run all tests in headless
@@ -41,19 +52,3 @@
 
 - `npm run combine-reports` to combine mocha json report
 - `npm run generate-report` to generate html report
-
-### Built With
-
-- [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html)
-- [mocha](https://github.com/mochajs/mocha)
-- [Chalk](https://github.com/chalk/chalk)
-- [Chance](https://github.com/chancejs/chancejs)
-- [Faker](https://github.com/marak/Faker.js/)
-- [date-fns](https://github.com/date-fns/date-fns)
-- [lodash](https://github.com/lodash/lodash)
-- [cross-env](https://github.com/kentcdodds/cross-env)
-  <!-- https://hackernoon.com/cypress-io-docker-the-ultimate-e2e-stack-a20ee25654b1 -->
-
-<!-- https://medium.freecodecamp.org/how-to-test-your-frontend-with-the-cypress-io-framework-f048070f4330 -->
-
-<!-- [![Debugging](http://img.youtube.com/vi/H0XScE08hy/0.jpg)](https://www.youtube.com/watch?v=H0XScE08hy8&feature=youtu.be) -->
