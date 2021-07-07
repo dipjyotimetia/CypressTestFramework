@@ -47,7 +47,7 @@
     "@percy/cypress": "^3.1.0",
     "@testing-library/cypress": "^7.0.6",
     "@types/chai": "^4.2.19",
-    "@types/fs-extra": "^9.0.11",
+    "@types/fs-extra": "^9.0.12",
     "@types/jquery": "^3.5.5",
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.12.4",
