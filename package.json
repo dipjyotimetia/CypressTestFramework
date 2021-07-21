@@ -43,7 +43,7 @@
   "devDependencies": {
     "@cypress/skip-test": "^2.6.1",
     "@neuralegion/cypress-har-generator": "^5.2.3",
-    "@percy/cli": "1.0.0-beta.58",
+    "@percy/cli": "1.0.0-beta.60",
     "@percy/cypress": "^3.1.0",
     "@testing-library/cypress": "^7.0.6",
     "@types/chai": "^4.2.21",
