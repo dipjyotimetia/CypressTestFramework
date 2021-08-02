@@ -62,7 +62,7 @@
     "cypress-xpath": "^1.6.2",
     "eslint-plugin-cypress": "^2.11.3",
     "fs-extra": "^10.0.0",
-    "knex": "^0.95.6",
+    "knex": "^0.95.9",
     "lighthouse": "^8.0.0",
     "mocha": "^9.0.2",
     "mochawesome": "^6.2.2",
