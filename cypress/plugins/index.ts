@@ -3,7 +3,7 @@ import path = require('path');
 import chalk = require('chalk');
 import timeStamp = require('date-fns');
 const { lighthouse, prepareAudit } = require("cypress-audit");
-const ReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
+const ReportGenerator = require("lighthouse/report/report-generator");
 // const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 import { downloadFile } from 'cypress-downloadfile/lib/addPlugin';
 
@@ -22,18 +22,7 @@ module.exports = (on, config) => {
   on('before:browser:launch', (browser = {}, launchOptions: { args: { push: (arg0: string) => void; fullscreen: boolean; }; }) => {
     // ensureBrowserFlags(browser, launchOptions);
     prepareAudit(launchOptions);
-    if (browser.name === 'chrome') {
-      launchOptions.args.push('--start-fullscreen')
-      launchOptions.args.push('--no-sandbox')
-      launchOptions.args.push('--disable-gpu')
-      return launchOptions;
-    }
-
-    if (browser.name === 'electron') {
-      launchOptions.args.fullscreen = true;
-
-      return launchOptions;
-    }
+    return launchOptions;
   });
 
   on('task', {
