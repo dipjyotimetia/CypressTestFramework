@@ -48,7 +48,7 @@
     "@testing-library/cypress": "^8.0.1",
     "@types/chai": "^4.2.22",
     "@types/fs-extra": "^9.0.13",
-    "@types/jquery": "^3.5.6",
+    "@types/jquery": "^3.5.7",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.10.3",
     "concurrently": "^6.3.0",
