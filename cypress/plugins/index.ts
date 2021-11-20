@@ -3,7 +3,7 @@ import path = require('path');
 import chalk = require('chalk');
 import timeStamp = require('date-fns');
 const { lighthouse, prepareAudit } = require("cypress-audit");
-const ReportGenerator = require("lighthouse/report/report-generator");
+const ReportGenerator = require("lighthouse/report/generator/report-generator");
 // const { install, ensureBrowserFlags } = require('@neuralegion/cypress-har-generator');
 import { downloadFile } from 'cypress-downloadfile/lib/addPlugin';
 
