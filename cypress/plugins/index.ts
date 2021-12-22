@@ -27,14 +27,14 @@ module.exports = (on, config) => {
 
   on('task', {
     info(message: any) {
-      console.log(chalk.yellow(`    INFO - ${logTime}; ${message}`))
+      console.log(`    INFO - ${logTime}; ${message}`)
       return null
     }
   });
 
   on('task', {
     fail(message: any) {
-      console.log(chalk.bgRed(`    ERROR - ${logTime}; ${message}`))
+      console.log(`    ERROR - ${logTime}; ${message}`)
       return null
     }
   });
