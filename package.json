@@ -65,7 +65,7 @@
     "knex": "^1.0.3",
     "lighthouse": "^9.4.0",
     "mocha": "^9.2.1",
-    "mochawesome": "^7.1.1",
+    "mochawesome": "^7.1.2",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.1.0",
     "start-server-and-test": "^1.14.0",
