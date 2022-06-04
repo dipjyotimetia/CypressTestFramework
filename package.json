@@ -41,8 +41,14 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@cypress/instrument-cra": "^1.4.0",
+    "@cypress/react":"5.12.5",
+    "@cypress/vite-dev-server":"2.2.3",
+    "@cypress/vue":"3.1.2",
+    "@cypress/webpack-dev-server":"1.8.4",
     "@cypress/skip-test": "^2.6.1",
     "@neuralegion/cypress-har-generator": "^5.3.0",
+    "@okta/okta-auth-js": "^6.6.1",
     "@percy/cli": "1.2.1",
     "@percy/cypress": "^3.1.1",
     "@testing-library/cypress": "^8.0.2",
@@ -62,6 +68,7 @@
     "cypress-xpath": "^1.6.2",
     "eslint-plugin-cypress": "^2.12.1",
     "fs-extra": "^10.1.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^2.1.0",
     "lighthouse": "^9.6.1",
     "mocha": "^10.0.0",
