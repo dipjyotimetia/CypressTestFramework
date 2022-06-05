@@ -11,14 +11,14 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-      - name: Checkout Dev Repo
-        uses: actions/checkout@v3
-        with:
-          repository: dipjyotimetia/ExpenseWeb
-          path: ExpenseWeb
+      # - name: Checkout Dev Repo
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: dipjyotimetia/ExpenseWeb
+      #     path: ExpenseWeb
 
-      - name: Setup Application under test
-        run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
+      # - name: Setup Application under test
+      #   run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
 
       - name: Cypress & Percy visual test
         # uses: cypress-io/github-action@v2.9.12
