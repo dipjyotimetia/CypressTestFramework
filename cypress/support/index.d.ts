@@ -124,5 +124,20 @@ declare namespace Cypress {
                                 })
          */
         createUser(user: {}): Chainable<any>;
+
+        /**
+   * Logs-in user by using Google API request
+   */
+        loginByGoogleApi(): Chainable<Response>;
+
+        /**
+         * Logs-in user by using Okta API request
+         */
+        loginByOktaApi(username: string, password?: string): Chainable<Response>;
+
+        /**
+     * Logs in via Auth0 API
+     */
+        loginByAuth0Api(username: string, password?: string): Chainable<any>;
     }
 }

@@ -1,9 +1,30 @@
+// @ts-check
 import 'cypress-file-upload';
 import '@testing-library/cypress/add-commands'
 import '@percy/cypress'
 import 'cypress-downloadfile/lib/downloadFileCommand'
 import "cypress-audit/commands";
 import '@testing-library/cypress/add-commands'
+
+// custom command to make taking snapshots with full name
+// formed from the test title + suffix easier
+// cy.visualSnapshot() // default full test title
+// cy.visualSnapshot('clicked') // full test title + ' - clicked'
+// also sets the width and height to the current viewport
+// @ts-ignore
+Cypress.Commands.add("visualSnapshot", (maybeName) => {
+    // @ts-ignore
+    let snapshotTitle = cy.state("runnable").fullTitle();
+    if (maybeName) {
+        snapshotTitle = snapshotTitle + " - " + maybeName;
+    }
+    cy.percySnapshot(snapshotTitle, {
+        // @ts-ignore
+        widths: [cy.state("viewportWidth")],
+        // @ts-ignore
+        minHeight: cy.state("viewportHeight"),
+    });
+});
 
 Cypress.Commands.add("login", (...states) => {
     cy.request({
@@ -12,6 +33,16 @@ Cypress.Commands.add("login", (...states) => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ states: states })
     });
+});
+
+// @ts-ignore
+Cypress.Commands.add("getBySel", (selector, ...args) => {
+    return cy.get(`[data-test=${selector}]`, ...args);
+});
+
+// @ts-ignore
+Cypress.Commands.add("getBySelLike", (selector, ...args) => {
+    return cy.get(`[data-test*=${selector}]`, ...args);
 });
 
 /**
@@ -144,6 +175,45 @@ Cypress.Commands.add('createUser', (user) => {
         })
     })
 })
+
+Cypress.Commands.add("loginByGoogleApi", () => {
+    cy.log("Logging in to Google");
+  
+    cy.request({
+      method: "POST",
+      url: "https://www.googleapis.com/oauth2/v4/token",
+      body: {
+        grant_type: "refresh_token",
+        client_id: Cypress.env("googleClientId"),
+        client_secret: Cypress.env("googleClientSecret"),
+        refresh_token: Cypress.env("googleRefreshToken"),
+      },
+    }).then(({ body }) => {
+      const { access_token, id_token } = body;
+  
+      cy.request({
+        method: "GET",
+        url: "https://www.googleapis.com/oauth2/v3/userinfo",
+        headers: { Authorization: `Bearer ${access_token}` },
+      }).then(({ body }) => {
+        cy.log(body);
+        const userItem = {
+          token: id_token,
+          user: {
+            googleId: body.sub,
+            email: body.email,
+            givenName: body.given_name,
+            familyName: body.family_name,
+            imageUrl: body.picture,
+          },
+        };
+  
+        window.localStorage.setItem("googleCypress", JSON.stringify(userItem));
+  
+        cy.visit("/");
+      });
+    });
+  });
 
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
 //     const domain = Cypress.env('BASE_DOMAIN')

@@ -1031,9 +1031,9 @@ describe('Kitchen Sink', function () {
             // The filePath is relative to your project's root.
 
             // https://on.cypress.io/readfile
-            cy.readFile('cypress.json').then(function (json) {
-                expect(json).to.be.an('object')
-            })
+            // cy.readFile('cypress.json').then(function (json) {
+            //     expect(json).to.be.an('object')
+            // })
 
         })
 
