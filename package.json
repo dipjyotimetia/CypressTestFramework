@@ -45,7 +45,7 @@
     "@cypress/react":"5.12.5",
     "@cypress/vite-dev-server":"2.2.3",
     "@cypress/vue":"3.1.2",
-    "@cypress/webpack-dev-server":"1.8.4",
+    "@cypress/webpack-dev-server":"2.0.0",
     "@cypress/skip-test": "^2.6.1",
     "@neuralegion/cypress-har-generator": "^5.3.0",
     "@okta/okta-auth-js": "^6.6.2",
