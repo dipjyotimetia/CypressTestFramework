@@ -34,7 +34,7 @@
     "cypress": "10.3.1",
     "cypress-axe": "^1.0.0",
     "cypress-downloadfile": "^1.2.2",
-    "date-fns": "^2.28.0",
+    "date-fns": "^2.29.1",
     "faker": "^6.6.6",
     "lodash": "^4.17.21",
     "rimraf": "^3.0.2",
