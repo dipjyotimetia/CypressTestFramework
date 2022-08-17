@@ -31,7 +31,7 @@
     "chalk": "^5.0.1",
     "cross-env": "^7.0.3",
     "cy2": "^2.0.0",
-    "cypress": "10.5.0",
+    "cypress": "10.6.0",
     "cypress-axe": "^1.0.0",
     "cypress-downloadfile": "^1.2.2",
     "date-fns": "^2.29.1",
