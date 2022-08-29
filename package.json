@@ -30,7 +30,7 @@
     "axe-core": "^4.4.3",
     "chalk": "^5.0.1",
     "cross-env": "^7.0.3",
-    "cy2": "^2.0.0",
+    "cy2": "^2.0.1",
     "cypress": "10.6.0",
     "cypress-axe": "^1.0.0",
     "cypress-downloadfile": "^1.2.3",
