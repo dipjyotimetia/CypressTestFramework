@@ -63,7 +63,7 @@
     "cypress-dark": "^1.8.3",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.6.1",
-    "cypress-ntlm-auth": "^4.0.5",
+    "cypress-ntlm-auth": "^4.1.0",
     "cypress-parallel": "^0.9.1",
     "cypress-xpath": "^2.0.1",
     "eslint-plugin-cypress": "^2.12.1",
