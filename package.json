@@ -44,7 +44,7 @@
     "@cypress/instrument-cra": "^1.4.0",
     "@cypress/react":"6.2.0",
     "@cypress/vite-dev-server":"3.4.0",
-    "@cypress/vue":"4.2.1",
+    "@cypress/vue":"4.2.2",
     "@cypress/webpack-dev-server":"2.5.0",
     "@cypress/skip-test": "^2.6.1",
     "@neuralegion/cypress-har-generator": "^5.3.3",
