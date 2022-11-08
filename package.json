@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@cypress/instrument-cra": "^1.4.0",
-    "@cypress/react":"6.2.1",
+    "@cypress/react":"7.0.1",
     "@cypress/vite-dev-server":"3.4.0",
     "@cypress/vue":"4.2.2",
     "@cypress/webpack-dev-server":"2.5.0",
