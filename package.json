@@ -47,7 +47,7 @@
     "@cypress/vue":"5.0.1",
     "@cypress/webpack-dev-server":"3.0.1",
     "@cypress/skip-test": "^2.6.1",
-    "@neuralegion/cypress-har-generator": "^5.3.3",
+    "@neuralegion/cypress-har-generator": "^5.3.4",
     "@okta/okta-auth-js": "^7.0.1",
     "@percy/cli": "1.13.0",
     "@percy/cypress": "^3.1.2",
