@@ -32,7 +32,7 @@
     "cross-env": "^7.0.3",
     "cy2": "^3.2.0",
     "cypress": "11.2.0",
-    "cypress-axe": "^1.0.0",
+    "cypress-axe": "^1.1.0",
     "cypress-downloadfile": "^1.2.3",
     "date-fns": "^2.29.3",
     "faker": "^6.6.6",
