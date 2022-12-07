@@ -16,4 +16,5 @@ updates:
     labels:
       - "security"
       - "dependencies"  
+      - "automerge"
     open-pull-requests-limit: 10  
