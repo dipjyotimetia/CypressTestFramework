@@ -1066,7 +1066,7 @@ describe('Kitchen Sink', function () {
 
     context('Local Storage', function () {
         beforeEach(function () {
-            cy.visit('https://example.cypress.io/commands/local-storage')
+            cy.visit('https://example.cypress.io/commands/storage#clearlocalstorage')
         })
         // Although local storage is automatically cleared
         // to maintain a clean state in between tests
@@ -1074,44 +1074,44 @@ describe('Kitchen Sink', function () {
 
         it('cy.clearLocalStorage() - clear all data in local storage', function () {
             // https://on.cypress.io/clearlocalstorage
-            cy.get('.ls-btn').click().should(function () {
+            cy.get('.ls-btn').click().should(() => {
                 expect(localStorage.getItem('prop1')).to.eq('red')
                 expect(localStorage.getItem('prop2')).to.eq('blue')
                 expect(localStorage.getItem('prop3')).to.eq('magenta')
-            })
-
-            // clearLocalStorage() yields the localStorage object
-            cy.clearLocalStorage().should(function (ls) {
+              })
+              
+              // clearLocalStorage() yields the localStorage object
+              cy.clearLocalStorage().should((ls) => {
                 expect(ls.getItem('prop1')).to.be.null
                 expect(ls.getItem('prop2')).to.be.null
                 expect(ls.getItem('prop3')).to.be.null
-            })
-
-            // **** Clear key matching string in Local Storage ****
-            cy.get('.ls-btn').click().should(function () {
+              })
+              
+              // Clear key matching string in localStorage
+              cy.get('.ls-btn').click().should(() => {
                 expect(localStorage.getItem('prop1')).to.eq('red')
                 expect(localStorage.getItem('prop2')).to.eq('blue')
                 expect(localStorage.getItem('prop3')).to.eq('magenta')
-            })
-
-            cy.clearLocalStorage('prop1').should(function (ls) {
+              })
+              
+              cy.clearLocalStorage('prop1').should((ls) => {
                 expect(ls.getItem('prop1')).to.be.null
                 expect(ls.getItem('prop2')).to.eq('blue')
                 expect(ls.getItem('prop3')).to.eq('magenta')
-            })
-
-            // **** Clear key's matching regex in Local Storage ****
-            cy.get('.ls-btn').click().should(function () {
+              })
+              
+              // Clear keys matching regex in localStorage
+              cy.get('.ls-btn').click().should(() => {
                 expect(localStorage.getItem('prop1')).to.eq('red')
                 expect(localStorage.getItem('prop2')).to.eq('blue')
                 expect(localStorage.getItem('prop3')).to.eq('magenta')
-            })
-
-            cy.clearLocalStorage(/prop1|2/).should(function (ls) {
+              })
+              
+              cy.clearLocalStorage(/prop1|2/).should((ls) => {
                 expect(ls.getItem('prop1')).to.be.null
                 expect(ls.getItem('prop2')).to.be.null
                 expect(ls.getItem('prop3')).to.eq('magenta')
-            })
+              })
         })
     })
 
