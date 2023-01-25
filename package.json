@@ -44,7 +44,7 @@
     "@cypress/instrument-cra": "^1.4.0",
     "@cypress/react": "7.0.2",
     "@cypress/skip-test": "^2.6.1",
-    "@neuralegion/cypress-har-generator": "^5.12.2",
+    "@neuralegion/cypress-har-generator": "^5.13.0",
     "@okta/okta-auth-js": "^7.2.0",
     "@percy/cli": "1.17.0",
     "@percy/cypress": "^3.1.2",
