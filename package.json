@@ -46,7 +46,7 @@
     "@cypress/skip-test": "^2.6.1",
     "@neuralegion/cypress-har-generator": "^5.16.3",
     "@okta/okta-auth-js": "^7.2.0",
-    "@percy/cli": "1.20.2",
+    "@percy/cli": "1.20.3",
     "@percy/cypress": "^3.1.2",
     "@testing-library/cypress": "^9.0.0",
     "@types/chai": "^4.3.4",
