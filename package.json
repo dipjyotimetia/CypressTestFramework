@@ -58,7 +58,7 @@
     "cypress-audit": "^1.1.0",
     "cypress-dark": "^1.8.3",
     "cypress-file-upload": "^5.0.8",
-    "cypress-multi-reporters": "^1.6.2",
+    "cypress-multi-reporters": "^1.6.3",
     "cypress-ntlm-auth": "^4.1.2",
     "cypress-parallel": "^0.12.0",
     "cypress-xpath": "^2.0.1",
