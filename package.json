@@ -37,7 +37,7 @@
     "date-fns": "^2.29.3",
     "faker": "^6.6.6",
     "lodash": "^4.17.21",
-    "rimraf": "^4.4.0",
+    "rimraf": "^4.4.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
