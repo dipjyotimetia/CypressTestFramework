@@ -2,11 +2,6 @@ import { defineConfig } from "cypress";
 import fs from 'fs-extra';
 import path from 'path';
 import { format } from 'date-fns';
-import axios from "axios";
-import { lighthouse, prepareAudit } from "cypress-audit";
-import ReportGenerator from "lighthouse/report/generator/report-generator";
-import { devServer } from "@cypress/react/plugins/react-scripts";
-import { install, ensureBrowserFlags } from '@neuralegion/cypress-har-generator';
 import { downloadFile } from 'cypress-downloadfile/lib/addPlugin';
 
 let logTime = format(new Date(), 'yyyy-MM-dd hh:mm:ss');
@@ -85,16 +80,6 @@ export default defineConfig({
                     console.log(`    ERROR - ${logTime}; ${message}`)
                     return null
                 }
-            });
-
-            on("task", {
-                lighthouse: lighthouse((lighthouseReport) => {
-                    const dirPath = './cypress/perfReport'
-                    if (!fs.existsSync(dirPath)) {
-                        fs.mkdirSync(dirPath)
-                    }
-                    fs.writeFileSync(`${dirPath}/lhreport.html`, ReportGenerator.generateReport(lighthouseReport.lhr, 'html'));
-                }),
             });
 
             on('task', {
