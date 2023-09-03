@@ -1,5 +1,4 @@
-
-FROM cypress/browsers:node14.16.0-chrome90-ff88
+FROM cypress/browsers:node-18.16.1-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
 WORKDIR /app
 
 # dependencies will be installed only if the package files change

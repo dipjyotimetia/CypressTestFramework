@@ -14,7 +14,7 @@
 
 #### Installation:
 
-- Install _nodejs 14.17.0 lts_ [Link](https://nodejs.org/en/download/)
+- Install _nodejs 18.16.0 lts_ [Link](https://nodejs.org/en/download/)
 - Install Vscode [link](https://code.visualstudio.com/download)
 
 #### Project Setup:
