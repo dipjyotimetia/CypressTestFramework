@@ -62,7 +62,7 @@
     "cypress-ntlm-auth": "^4.1.2",
     "cypress-parallel": "^0.13.0",
     "cypress-xpath": "^2.0.1",
-    "eslint-plugin-cypress": "^2.14.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "fs-extra": "^11.1.1",
     "jsonwebtoken": "^9.0.2",
     "knex": "^2.5.1",
