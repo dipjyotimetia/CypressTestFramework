@@ -49,7 +49,7 @@
     "@percy/cli": "1.27.3",
     "@percy/cypress": "^3.1.2",
     "@testing-library/cypress": "^10.0.1",
-    "@types/chai": "^4.3.6",
+    "@types/chai": "^4.3.7",
     "@types/fs-extra": "^11.0.2",
     "@types/jquery": "^3.5.22",
     "@types/mocha": "^10.0.2",
