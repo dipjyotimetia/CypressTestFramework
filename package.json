@@ -52,7 +52,7 @@
     "@types/chai": "^4.3.9",
     "@types/fs-extra": "^11.0.3",
     "@types/jquery": "^3.5.22",
-    "@types/mocha": "^10.0.2",
+    "@types/mocha": "^10.0.3",
     "concurrently": "^8.2.2",
     "cross-env": "7.0.3",
     "cypress-audit": "^1.1.0",
