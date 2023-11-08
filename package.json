@@ -50,7 +50,7 @@
     "@percy/cypress": "^3.1.2",
     "@testing-library/cypress": "^10.0.1",
     "@types/chai": "^4.3.9",
-    "@types/fs-extra": "^11.0.3",
+    "@types/fs-extra": "^11.0.4",
     "@types/jquery": "^3.5.25",
     "@types/mocha": "^10.0.3",
     "concurrently": "^8.2.2",
