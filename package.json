@@ -51,7 +51,7 @@
     "@testing-library/cypress": "^10.0.1",
     "@types/chai": "^4.3.10",
     "@types/fs-extra": "^11.0.4",
-    "@types/jquery": "^3.5.25",
+    "@types/jquery": "^3.5.27",
     "@types/mocha": "^10.0.4",
     "concurrently": "^8.2.2",
     "cross-env": "7.0.3",
