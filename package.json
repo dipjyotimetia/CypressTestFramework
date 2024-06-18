@@ -33,7 +33,7 @@
     "cy2": "^4.0.9",
     "cypress": "13.11.0",
     "cypress-axe": "^1.5.0",
-    "cypress-downloadfile": "^1.2.3",
+    "cypress-downloadfile": "^1.2.4",
     "date-fns": "^3.6.0",
     "faker": "^6.6.6",
     "lodash": "^4.17.21",
