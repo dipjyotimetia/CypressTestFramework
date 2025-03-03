@@ -72,6 +72,6 @@
     "mochawesome-merge": "^5.0.0",
     "mochawesome-report-generator": "^6.2.0",
     "start-server-and-test": "^2.0.10",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   }
 }
