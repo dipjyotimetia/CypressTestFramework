@@ -47,7 +47,7 @@
     "@neuralegion/cypress-har-generator": "^5.17.0",
     "@okta/okta-auth-js": "^7.12.1",
     "@percy/cli": "1.30.10",
-    "@percy/cypress": "^3.1.5",
+    "@percy/cypress": "^3.1.6",
     "@testing-library/cypress": "^10.0.3",
     "@types/chai": "^5.2.1",
     "@types/fs-extra": "^11.0.4",
